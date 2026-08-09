@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>修了生限定のお知らせ｜Institut für Organic Business</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@500;700;900&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --point:#f26b3b;
+    --ink:#553727;
+    --bg:#f9f7ef;
+    --second:#0085c9;
+    --sub:#85634b;
+    --line:#e6ddc9;
+    --white:#fffdf8;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{
+    font-family:"Noto Sans JP",sans-serif;
+    color:var(--ink);
+    background:var(--bg);
+    line-height:1.9;
+    font-size:16px;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:680px;margin:0 auto;padding:0 20px;}
+  h1,h2,h3,.mincho{font-family:"Zen Old Mincho",serif;}
+
+  .hero{background:var(--white);padding:44px 0 36px;border-bottom:3px solid var(--point);}
+  .hero .eyebrow{color:var(--point);font-weight:700;font-size:14px;letter-spacing:.04em;margin-bottom:14px;}
+  .hero h1{font-size:25px;font-weight:700;line-height:1.55;margin-bottom:16px;}
+  .hero .lead{font-size:15px;color:var(--sub);line-height:1.9;}
+  .logo{display:block;margin-top:28px;width:190px;max-width:56%;height:auto;}
+
+  section{padding:38px 0;}
+  section.alt{background:var(--white);}
+  .sec-title{font-size:20px;font-weight:700;margin-bottom:20px;padding-left:14px;border-left:5px solid var(--point);}
+  .sec-eyebrow{font-size:12px;color:var(--second);font-weight:700;letter-spacing:.06em;margin-bottom:6px;}
+
+  p{margin-bottom:14px;}
+  p:last-child{margin-bottom:0;}
+
+  .card{background:var(--white);border:1px solid var(--line);border-radius:14px;padding:24px 22px;margin-bottom:16px;}
+
+  .check-list{list-style:none;}
+  .check-list li{padding:12px 0 12px 30px;position:relative;font-size:15px;border-bottom:1px dashed var(--line);}
+  .check-list li:last-child{border-bottom:none;}
+  .check-list li::before{content:"□";position:absolute;left:0;top:11px;color:var(--point);font-weight:700;font-size:17px;}
+
+  .step{display:flex;gap:14px;align-items:flex-start;padding:16px 0;border-bottom:1px dashed var(--line);}
+  .step:last-child{border-bottom:none;}
+  .step .num{
+    flex:none;width:38px;height:38px;border-radius:50%;background:var(--ink);color:#fff;
+    display:flex;align-items:center;justify-content:center;font-family:"Zen Old Mincho",serif;font-weight:700;font-size:16px;
+  }
+  .step .body b{display:block;font-size:15px;margin-bottom:4px;}
+  .step .body span{font-size:14px;color:var(--sub);}
+
+  .voice-card{background:var(--white);border:1px solid var(--line);border-left:5px solid var(--second);border-radius:0 12px 12px 0;padding:20px 20px;margin-bottom:16px;}
+  .voice-card .q{font-size:15px;line-height:1.85;margin-bottom:12px;}
+  .voice-card .who{font-size:13px;color:var(--sub);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;}
+  .voice-card .who a{color:var(--point);font-weight:700;text-decoration:none;font-size:13px;}
+  .voice-card .who a:hover{text-decoration:underline;}
+
+  .u-block{background:#fbeee6;border-radius:12px;padding:20px 20px;margin-bottom:14px;}
+  .u-block .label{font-size:13px;font-weight:700;color:var(--point);margin-bottom:6px;}
+
+  .n-block{background:var(--ink);color:#f3e9dc;border-radius:14px;padding:26px 22px;text-align:center;}
+  .n-block .mark{font-size:15px;line-height:1.9;margin-bottom:14px;}
+  .n-block .small{font-size:13px;color:#d9c3ac;}
+
+  .plans{display:flex;flex-direction:column;gap:16px;}
+  .plan{background:var(--white);border:1px solid var(--line);border-radius:16px;overflow:hidden;}
+  .plan.rec{border-color:var(--point);box-shadow:0 4px 18px rgba(242,107,59,.15);}
+  .plan .head{padding:16px 20px;background:var(--bg);display:flex;justify-content:space-between;align-items:center;}
+  .plan.rec .head{background:var(--point);color:#fff;}
+  .plan .head .name{font-family:"Zen Old Mincho",serif;font-weight:700;font-size:18px;}
+  .plan .head .tag{font-size:11px;background:var(--ink);color:#fff;padding:3px 9px;border-radius:20px;}
+  .plan.rec .head .tag{background:#fff;color:var(--point);}
+  .plan .body{padding:20px;}
+  .plan ul{list-style:none;margin-bottom:16px;}
+  .plan ul li{padding:7px 0 7px 22px;position:relative;font-size:14px;}
+  .plan ul li::before{content:"・";position:absolute;left:0;color:var(--sub);}
+  .plan .price{text-align:center;padding-top:10px;border-top:1px dashed var(--line);}
+  .plan .price .eur{font-family:"Zen Old Mincho",serif;font-weight:900;font-size:30px;color:var(--point);}
+  .plan .price .jpy{font-size:13px;color:var(--sub);margin-top:4px;}
+  .plan .start{text-align:center;font-size:12px;color:var(--second);margin-top:8px;font-weight:700;}
+
+  .pay-table{width:100%;border-collapse:collapse;font-size:14px;}
+  .pay-table th,.pay-table td{text-align:left;padding:12px 6px;border-bottom:1px solid var(--line);vertical-align:top;}
+  .pay-table th{width:34%;color:var(--sub);font-weight:500;}
+  .pay-table td{font-weight:700;}
+
+  .faq{border-bottom:1px solid var(--line);padding:16px 0;}
+  .faq:last-child{border-bottom:none;}
+  .faq .q{font-weight:700;font-size:15px;margin-bottom:8px;display:flex;gap:8px;}
+  .faq .q .qm{color:var(--point);flex:none;}
+  .faq .a{font-size:14px;color:var(--sub);padding-left:24px;}
+
+  .callout{background:#eaf5fb;border-radius:12px;padding:18px 20px;font-size:14px;color:#1a5a78;line-height:1.85;}
+
+  .form-sec{background:var(--white);border-top:3px solid var(--point);}
+  form{margin-top:6px;}
+  .field{margin-bottom:20px;}
+  label{display:block;font-weight:700;font-size:15px;margin-bottom:8px;}
+  label .req{color:var(--point);font-size:12px;margin-left:6px;}
+  label .opt{color:var(--sub);font-size:12px;margin-left:6px;font-weight:400;}
+  input[type=text],input[type=email],input[type=tel],select,textarea{
+    width:100%;padding:13px 14px;border:1px solid var(--line);border-radius:10px;font-size:16px;
+    font-family:inherit;background:#fff;color:var(--ink);
+  }
+  input:focus,select:focus,textarea:focus{outline:none;border-color:var(--point);}
+  textarea{min-height:90px;resize:vertical;}
+  .radio-row{display:flex;flex-wrap:wrap;gap:10px;}
+  .radio-opt{
+    flex:1 1 auto;border:1px solid var(--line);border-radius:10px;padding:12px 14px;
+    font-size:14px;cursor:pointer;background:#fff;text-align:center;
+  }
+  .radio-opt input{margin-right:6px;accent-color:var(--point);}
+  .check{display:flex;gap:10px;align-items:flex-start;background:var(--bg);border-radius:10px;padding:14px;font-size:14px;line-height:1.7;}
+  .check input{margin-top:5px;flex:none;width:18px;height:18px;accent-color:var(--point);}
+  .submit{
+    width:100%;background:var(--point);color:#fff;border:none;padding:17px;border-radius:12px;font-size:17px;
+    font-weight:700;font-family:"Zen Old Mincho",serif;cursor:pointer;margin-top:8px;transition:opacity .2s;
+  }
+  .submit:hover{opacity:.9;}
+  .submit:disabled{opacity:.5;cursor:not-allowed;}
+  .form-note{font-size:13px;color:var(--sub);margin-top:14px;text-align:center;line-height:1.8;}
+
+  #thanks{display:none;text-align:center;padding:30px 10px;}
+  #thanks .mincho{font-size:20px;color:var(--point);margin-bottom:14px;}
+
+  .closing{background:var(--white);text-align:center;padding:44px 20px;border-top:1px solid var(--line);}
+  .closing .mincho{font-size:19px;line-height:1.8;color:var(--ink);}
+  .closing .actions{margin-top:22px;display:flex;flex-direction:column;gap:10px;max-width:320px;margin-left:auto;margin-right:auto;}
+  .closing .actions a{
+    display:block;padding:13px;border-radius:10px;font-size:14px;font-weight:700;text-decoration:none;
+    border:1px solid var(--line);color:var(--ink);
+  }
+  .closing .actions a.primary{background:var(--point);color:#fff;border-color:var(--point);}
+
+  footer{background:var(--ink);color:#e9ddcd;text-align:center;padding:28px 20px;font-size:12px;line-height:1.9;}
+  footer a{color:#f7c9b3;text-decoration:underline;}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="eyebrow">オーガニック専門家コース 修了生限定のお知らせ</div>
+    <h1>修了は、ゴールじゃなかった。<br>学びを日常の言葉にしていく続きを、8月からつくります。</h1>
+    <div class="lead">メールレッスン・共同学習会・グループコンサル。<br>修了生のためのモニター価格でのご案内です。</div>
+    <img class="logo" src="iob-logo-orange.png" alt="Institut für Organic Business" width="190">
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <div class="sec-eyebrow">はじめに</div>
+    <h2 class="sec-title">修了したあとも、一緒に育っていく場所を</h2>
+    <p>私たちは、修了証をお渡ししたら終わりの学校ではなく、修了したあとも一緒に育っていく場所であることを選びます。</p>
+    <p>知識は、使い続けなければ薄れていきます。そして、一人で学び続けるのはしんどいことを、私自身がずっと見てきました。</p>
+    <p>だから、修了後の365日にも、学びを置き続けます。</p>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap">
+    <div class="sec-eyebrow">この続きで、変わっていくこと</div>
+    <h2 class="sec-title">3ヶ月後・半年後・1年後の暮らし</h2>
+    <div class="card">
+      <ul class="check-list">
+        <li>3ヶ月後。「オーガニックって何?」と聞かれたとき、迷わず自分の言葉で答えている</li>
+        <li>半年後。自分の発信や仕事の中に、学んだ知識がすでに当たり前のように混ざっている</li>
+        <li>1年後。同じ道を歩く仲間と、月に一度は近況を話している</li>
+      </ul>
+    </div>
+    <p>大きな達成の話ではありません。日々のちょっとした場面で、詰まらずに話せる自分になっていく。それだけのことです。</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="sec-eyebrow">その証拠に</div>
+    <h2 class="sec-title">共同学習会は、こう続いてきました</h2>
+    <p>共同学習会は、2026年1月から毎月ライブで続けています。会社員、経営者、フリーランス、主婦の方。立場はバラバラでも、みんな同じ問いに向き合ってきました。「ビジネスからオーガニックを広げるために、自分にどう向き合うか」。</p>
+    <p>毎回、最後にひとりずつ感想を言い合う時間があります。この時間が、毎回宝物みたいになる。「毎日忙しくて過去を振り返る時間なんてなかった」と、みんな言うんです。だからこの会だけは絶対参加すると決めて、予定を空けてくれる人がいます。</p>
+
+    <div class="voice-card">
+      <div class="q">「お客様から『オーガニックの何がいいの』と聞かれて、うまく説明できなかった。勉強し直そうと思ってIOBに入りました」<br>今は、周りからのアドバイスが、そのまま自分の勉強になっています。「まだまだ勉強しないといけないことがあるな、と今も思っています」</div>
+      <div class="who"><span>古谷栄樹さん（兵庫県・農業）</span><a href="https://youtu.be/vLFB0WKrulA" target="_blank" rel="noopener">▶ 動画で見る</a></div>
+    </div>
+
+    <div class="voice-card">
+      <div class="q">「自分の軸を作って、それで会社をしっかり運営していきたい」という思いで入学。学んだあとは、お客様にも取引先にも、自信を持って話せるようになりました。「名刺にも、オーガニック専門家って書いてあるので」</div>
+      <div class="who"><span>久松麻紀さん（健康食品ブランド代表）</span><a href="https://youtu.be/QDMWgjHvRaU" target="_blank" rel="noopener">▶ 動画で見る</a></div>
+    </div>
+    <p style="font-size:13px;color:var(--sub);text-align:center;">ほかの修了生の声も、公開しています。<br><a href="https://www.youtube.com/playlist?list=PLC7ldLFCvgQgf1VTb2o4MUEl4UYon0t7q" target="_blank" rel="noopener" style="color:var(--point);font-weight:700;">▶ 修了生インタビューを再生リストで見る</a></p>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap">
+    <div class="sec-eyebrow">なぜ、今なのか</div>
+    <h2 class="sec-title">仕組みが、今回はじめて揃いました</h2>
+    <div class="u-block">
+      <div class="label">これまで</div>
+      <p>修了したあと、学びを続ける仕組みが、そもそもありませんでした。誰のせいでもありません。修了後の場所を、私が作ってこなかっただけです。</p>
+    </div>
+    <div class="u-block">
+      <div class="label">今回</div>
+      <p>クイズ、メールレッスン、共同学習会。ひとつひとつはずっと前からあったのに、修了生のための一本の道としてつなげたのは、今回が初めてです。</p>
+    </div>
+    <p>モニター価格でのご案内は、今回だけです。定員は設けていません。アンケートと取材にご協力いただくことだけをお願いしています。</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="n-block">
+      <div class="mark">「知ってるはずなのに、いざ聞かれると言葉が出てこない」<br><br>そう言ってくれた修了生が、一人じゃありませんでした。<br><br>これ、修了生のせいじゃないと思っています。<br>続ける仕組みを、私が作ってこなかっただけです。</div>
+      <div class="small">— レムケなつこ</div>
+    </div>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap">
+    <div class="sec-eyebrow">新しい勝ち方</div>
+    <h2 class="sec-title">梅・竹・松、3つの階段</h2>
+    <div class="card">
+      <div class="step">
+        <div class="num">1</div>
+        <div class="body"><b>毎日1通のメールで、知識を確かなものにする</b><span>OS認定資格のテスト対策も兼ねています（梅）</span></div>
+      </div>
+      <div class="step">
+        <div class="num">2</div>
+        <div class="body"><b>月1回の共同学習会で、事業の柱を組み立てる</b><span>相談ではなく、柱を組み立てる会です（竹）</span></div>
+      </div>
+      <div class="step">
+        <div class="num">3</div>
+        <div class="body"><b>月1回のグループコンサルで、ビジネスの詰まりを相談して解く</b><span>ビジネスの相談そのものです（松）</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="sec-eyebrow">まずは、ここから</div>
+    <h2 class="sec-title">5分でできる、最初の一歩</h2>
+    <p>いきなり申し込まなくて大丈夫です。まずは、公開しているクイズを1問だけ解いてみてください。今のあなたの知識レベルが、5分でわかります。</p>
+    <div class="callout">
+      <a href="https://iobschool.github.io/os-quiz/" target="_blank" rel="noopener" style="color:#1a5a78;font-weight:700;">▶ オーガニック知識クイズを試してみる</a>
+    </div>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap">
+    <div class="sec-eyebrow">ご案内内容</div>
+    <h2 class="sec-title">梅・竹・松（モニター価格）</h2>
+
+    <div class="plans">
+      <div class="plan">
+        <div class="head"><span class="name">梅</span><span class="tag">メールレッスン</span></div>
+        <div class="body">
+          <ul>
+            <li>毎日1通、メールレッスン365日</li>
+            <li>OS認定資格のテスト対策つき</li>
+          </ul>
+          <div class="price"><span class="eur">€280</span><div class="jpy" data-jpy-base="280">日本円 換算 約 <span class="jpy-amount">—</span></div></div>
+          <div class="start">9月中旬 開始</div>
+        </div>
+      </div>
+
+      <div class="plan rec">
+        <div class="head"><span class="name">竹</span><span class="tag">梅 ＋ 共同学習会</span></div>
+        <div class="body">
+          <ul>
+            <li>梅の内容すべて</li>
+            <li>共同学習会（月1回）＝事業の柱を組み立てる会</li>
+          </ul>
+          <div class="price"><span class="eur">€540</span><div class="jpy" data-jpy-base="540">日本円 換算 約 <span class="jpy-amount">—</span></div></div>
+          <div class="start">10月 開始</div>
+        </div>
+      </div>
+
+      <div class="plan">
+        <div class="head"><span class="name">松</span><span class="tag">竹 ＋ グループコンサル</span></div>
+        <div class="body">
+          <ul>
+            <li>竹の内容すべて</li>
+            <li>グループコンサル（月1回）＝ビジネスの相談</li>
+          </ul>
+          <div class="price"><span class="eur">€850</span><div class="jpy" data-jpy-base="850">日本円 換算 約 <span class="jpy-amount">—</span></div></div>
+          <div class="start">10月 開始</div>
+        </div>
+      </div>
+    </div>
+    <p style="font-size:12px;color:var(--sub);text-align:center;margin-top:6px;" id="rateNote">日本円の金額は、その日の為替レートで自動的に計算した目安です。お支払いはユーロ建てになります。</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="sec-eyebrow">お支払いについて</div>
+    <h2 class="sec-title">決済方法</h2>
+    <div class="card">
+      <table class="pay-table">
+        <tr><th>銀行振込（日本・ドイツ）</th><td>一括のみ</td></tr>
+        <tr><th>梅（メールレッスン）</th><td>決済手段を問わず一括のみ</td></tr>
+        <tr><th>竹・松（Stripe／PayPal）</th><td>一括、または3回までの分割払いが選べます</td></tr>
+      </table>
+    </div>
+    <div class="callout">Stripe・PayPalの決済リンクは、お申し込みフォーム送信後の自動返信メールでご案内します。準備が整い次第、順次お送りします。</div>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap">
+    <div class="sec-eyebrow">モニターについて</div>
+    <h2 class="sec-title">条件は、アンケートと取材へのご協力だけです</h2>
+    <p>今回はモニター価格でのご案内です。お願いしたい条件は、アンケートと取材にご協力いただくこと、それだけです。</p>
+    <p>お名前の出し方（イニシャル／フルネーム）や、お顔出しの有無は、その際に改めて個別にお伺いします。今すぐ決めていただく必要はありませんので、ご安心ください。</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="sec-eyebrow">よくある質問</div>
+    <h2 class="sec-title">お申し込み前に</h2>
+    <div class="faq">
+      <div class="q"><span class="qm">Q</span>途中でプランを変更できますか？</div>
+      <div class="a">はい。梅から竹・松へのステップアップは、いつでもご相談いただけます。差額分をお支払いいただく形でご案内します。</div>
+    </div>
+    <div class="faq">
+      <div class="q"><span class="qm">Q</span>共同学習会・グループコンサルはオンラインですか？</div>
+      <div class="a">はい、オンラインでの開催です。日程は、お申し込み後にご案内します。</div>
+    </div>
+    <div class="faq">
+      <div class="q"><span class="qm">Q</span>修了生でなくても申し込めますか？</div>
+      <div class="a">今回は、オーガニック専門家コースの修了生・在校生向けのご案内です。まずは公式LINEやメールでお問い合わせください。</div>
+    </div>
+    <div class="faq">
+      <div class="q"><span class="qm">Q</span>締切はいつですか？</div>
+      <div class="a">モニター価格でのお申し込みは、2026年8月31日までです。定員は設けていません。</div>
+    </div>
+  </div>
+</section>
+
+<section class="form-sec">
+  <div class="wrap">
+    <div class="sec-eyebrow">お申し込み</div>
+    <h2 class="sec-title">申込フォーム</h2>
+
+    <form id="applyForm">
+      <div class="field">
+        <label>お名前<span class="req">必須</span></label>
+        <input type="text" name="name" placeholder="例：山田 花子" required>
+      </div>
+      <div class="field">
+        <label>メールアドレス<span class="req">必須</span></label>
+        <input type="email" name="email" placeholder="example@mail.com" required>
+      </div>
+      <div class="field">
+        <label>お申し込みプラン<span class="req">必須</span></label>
+        <div class="radio-row">
+          <label class="radio-opt"><input type="radio" name="plan" value="梅（メールレッスン €280）" required>梅<br>€280</label>
+          <label class="radio-opt"><input type="radio" name="plan" value="竹（梅＋共同学習会 €540）">竹<br>€540</label>
+          <label class="radio-opt"><input type="radio" name="plan" value="松（竹＋グルコン €850）">松<br>€850</label>
+        </div>
+      </div>
+      <div class="field">
+        <label>ご希望の決済方法<span class="req">必須</span></label>
+        <div class="radio-row">
+          <label class="radio-opt"><input type="radio" name="payment" value="銀行振込（日本）" required>銀行振込<br>（日本）</label>
+          <label class="radio-opt"><input type="radio" name="payment" value="銀行振込（ドイツ）">銀行振込<br>（ドイツ）</label>
+          <label class="radio-opt"><input type="radio" name="payment" value="Stripe（クレジットカード）">Stripe<br>（カード）</label>
+          <label class="radio-opt"><input type="radio" name="payment" value="PayPal">PayPal</label>
+        </div>
+      </div>
+      <div class="field">
+        <label>お支払い回数<span class="opt">任意・竹/松でStripe/PayPalの場合のみ選べます</span></label>
+        <div class="radio-row">
+          <label class="radio-opt"><input type="radio" name="installment" value="一括" checked>一括</label>
+          <label class="radio-opt"><input type="radio" name="installment" value="3回分割">3回分割</label>
+        </div>
+      </div>
+      <div class="field">
+        <label>モニター表記のご希望<span class="opt">任意・のちほど改めて伺います</span></label>
+        <select name="monitorName">
+          <option value="未定・あとで伺う">まだ決めていない（あとで伺います）</option>
+          <option value="フルネーム">フルネームで掲載してよい</option>
+          <option value="イニシャル">イニシャルで掲載してほしい</option>
+        </select>
+      </div>
+      <div class="field">
+        <label>ご質問・ご連絡事項</label>
+        <textarea name="message" placeholder="気になること、ご相談など、なんでもどうぞ。"></textarea>
+      </div>
+
+      <div class="field">
+        <div class="check">
+          <input type="checkbox" id="agree" required>
+          <label for="agree" style="font-weight:400;margin:0;">
+            上記のプラン内容・モニター条件（アンケート・取材へのご協力）、ならびに<a href="terms.html" target="_blank" rel="noopener" style="color:var(--point);font-weight:700;">受講規約</a>・<a href="privacy.html" style="color:var(--point);font-weight:700;">プライバシーポリシー</a>・<a href="tokushoho.html" style="color:var(--point);font-weight:700;">特定商取引法に基づく表記</a>を確認し、同意のうえお申し込みします。
+          </label>
+        </div>
+      </div>
+
+      <button type="submit" class="submit" id="submitBtn">この内容で申し込む</button>
+      <div class="form-note">送信後、自動返信メールにて<br>お支払い方法のご案内をお送りします。</div>
+    </form>
+
+    <div id="thanks">
+      <div class="mincho">お申し込みありがとうございます。</div>
+      <p>確認のため、ご登録のメールアドレス宛に<br>自動返信メールをお送りしました。<br><br>
+      お支払いのご案内が記載されていますので、<br>ご確認をお願いいたします。<br><br>
+      これから、また一緒に学んでいけたら嬉しいです。</p>
+    </div>
+  </div>
+</section>
+
+<div class="closing">
+  <div class="wrap">
+    <p class="mincho">これを読んでくれたあなたも、修了生の一人。<br>ここから、また一緒に学んでいけたら嬉しいです。</p>
+    <div class="actions">
+      <a class="primary" href="#applyForm">申し込みフォームへ</a>
+      <a href="https://iobschool.github.io/os-quiz/" target="_blank" rel="noopener">まずはクイズを1問だけ</a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  Institut für Organic Business GmbH<br>
+  お問い合わせ：school@iob.bio<br><br>
+  <a href="terms.html" target="_blank" rel="noopener">受講規約</a>　｜
+  <a href="privacy.html">プライバシーポリシー</a>　｜
+  <a href="tokushoho.html">特定商取引法に基づく表記</a><br><br>
+  Copyright ©2026 Institut für Organic Business GmbH. All Rights Reserved.
+</footer>
+
+<script>
+  // ── 受付期限：2026年8月31日（JST）いっぱいで自動的にモニター価格の案内を終了 ──
+  (function(){
+    var deadline = Date.UTC(2026, 8, 1, 15, 0, 0); // 2026-09-01 00:00 JST
+    if (Date.now() >= deadline) {
+      var note = document.getElementById('rateNote');
+      if (note) note.textContent = "モニター価格でのご案内期間は終了しました。お問い合わせは school@iob.bio まで。";
+    }
+  })();
+
+  // ── EUR→JPY 自動換算（Frankfurter API・ECB基準・キー不要）。取得できない場合は固定レートで表示 ──
+  (function(){
+    var FALLBACK_RATE = 182.64;
+    function render(rate){
+      document.querySelectorAll('.jpy').forEach(function(el){
+        var eur = parseFloat(el.getAttribute('data-jpy-base'));
+        var jpy = Math.round(eur * rate / 100) * 100;
+        el.querySelector('.jpy-amount').textContent = jpy.toLocaleString('ja-JP') + '円';
+      });
+    }
+    render(FALLBACK_RATE);
+    fetch('https://api.frankfurter.app/latest?from=EUR&to=JPY')
+      .then(function(res){ return res.json(); })
+      .then(function(data){
+        if (data && data.rates && data.rates.JPY) {
+          render(data.rates.JPY);
+          var note = document.getElementById('rateNote');
+          if (note && !note.textContent.includes('終了')) {
+            note.textContent = '日本円の金額は、本日（' + data.date + '）の為替レート（1€=' + Math.round(data.rates.JPY) + '円）で自動計算した目安です。お支払いはユーロ建てになります。';
+          }
+        }
+      })
+      .catch(function(){ /* フォールバックのレートのまま表示 */ });
+  })();
+
+  // ▼▼▼ GASをデプロイしたあと、ここにWebアプリのURLを貼り付けてください ▼▼▼
+  const GAS_URL = "PASTE_GAS_WEBAPP_URL_HERE";
+
+  const form = document.getElementById('applyForm');
+  const btn = document.getElementById('submitBtn');
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    if(!document.getElementById('agree').checked){ return; }
+    btn.disabled = true;
+    btn.textContent = "送信中…";
+
+    const data = {
+      name: form.name.value,
+      email: form.email.value,
+      plan: (form.querySelector('input[name=plan]:checked') || {}).value || "",
+      payment: (form.querySelector('input[name=payment]:checked') || {}).value || "",
+      installment: (form.querySelector('input[name=installment]:checked') || {}).value || "",
+      monitorName: form.monitorName.value,
+      message: form.message.value
+    };
+
+    fetch(GAS_URL, {
+      method:"POST",
+      mode:"no-cors",
+      headers:{"Content-Type":"text/plain;charset=utf-8"},
+      body: JSON.stringify(data)
+    }).then(function(){
+      form.style.display="none";
+      document.getElementById('thanks').style.display="block";
+      window.scrollTo({top:document.getElementById('thanks').offsetTop-40, behavior:"smooth"});
+    }).catch(function(){
+      btn.disabled=false;
+      btn.textContent="この内容で申し込む";
+      alert("送信に失敗しました。お手数ですが、もう一度お試しください。");
+    });
+  });
+</script>
+
+</body>
+</html>
