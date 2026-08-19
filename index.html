@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noindex, nofollow">
-<title>修了生限定のお知らせ｜Institut für Organic Business</title>
+<title>ここは、学ぶ場所ではありません｜Institut für Organic Business</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@500;700;900&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
@@ -30,11 +30,54 @@
   .wrap{max-width:680px;margin:0 auto;padding:0 20px;}
   h1,h2,h3,.mincho{font-family:"Zen Old Mincho",serif;}
 
-  .hero{background:var(--white);padding:44px 0 36px;border-bottom:3px solid var(--point);}
-  .hero .eyebrow{color:var(--point);font-weight:700;font-size:14px;letter-spacing:.04em;margin-bottom:14px;}
-  .hero h1{font-size:25px;font-weight:700;line-height:1.55;margin-bottom:16px;}
-  .hero .lead{font-size:15px;color:var(--sub);line-height:1.9;}
-  .logo{display:block;margin-top:28px;width:190px;max-width:56%;height:auto;}
+  /* ===== ヒーロー（写真＋グラデーション） ===== */
+  .hero{
+    position:relative;
+    min-height:78vh;
+    display:flex;
+    align-items:flex-end;
+    background-image:url("img/tour-toast.jpg");
+    background-size:cover;
+    background-position:58% center;
+    padding:60px 0 40px;
+    overflow:hidden;
+  }
+  .hero::before{
+    content:"";position:absolute;inset:0;
+    background:linear-gradient(to bottom,
+      rgba(28,16,9,.04) 0%,
+      rgba(28,16,9,.16) 22%,
+      rgba(28,16,9,.58) 44%,
+      rgba(28,16,9,.86) 66%,
+      rgba(28,16,9,.94) 100%);
+  }
+  .hero .wrap{position:relative;z-index:1;}
+  .hero .eyebrow{
+    color:#f2e4d6;font-size:13px;letter-spacing:.08em;margin-bottom:16px;
+    font-weight:500;text-shadow:0 1px 10px rgba(0,0,0,.9);
+  }
+  .hero h1{
+    font-size:29px;font-weight:700;line-height:1.55;margin-bottom:18px;color:#fff;
+    text-shadow:0 2px 18px rgba(0,0,0,.85),0 1px 4px rgba(0,0,0,.6);
+  }
+  .hero .lead{
+    font-size:15px;color:#f4e9dd;line-height:1.9;
+    text-shadow:0 1px 12px rgba(0,0,0,.85);
+  }
+  .hero .logo{display:block;margin-top:26px;width:170px;max-width:52%;height:auto;
+    filter:brightness(0) invert(1);opacity:.92;}
+  .hero-cap{
+    position:absolute;right:14px;bottom:10px;z-index:1;
+    font-size:10.5px;color:rgba(255,255,255,.68);letter-spacing:.02em;
+  }
+  .sp{display:none;}
+  @media(max-width:480px){
+    .sp{display:inline;}
+    .hero{min-height:92vh;background-position:52% 22%;padding-bottom:34px;}
+    .hero h1{font-size:23px;line-height:1.6;}
+    .hero .lead{font-size:14px;}
+    .hero .logo{width:150px;margin-top:22px;}
+  }
 
   section{padding:38px 0;}
   section.alt{background:var(--white);}
@@ -46,62 +89,121 @@
 
   .card{background:var(--white);border:1px solid var(--line);border-radius:14px;padding:24px 22px;margin-bottom:16px;}
 
+  /* 写真 */
+  .photo{margin:24px 0;}
+  .photo img{width:100%;height:auto;border-radius:14px;display:block;}
+  .photo .cap{font-size:12.5px;color:var(--sub);margin-top:9px;line-height:1.75;}
+
   .check-list{list-style:none;}
-  .check-list li{padding:12px 0 12px 30px;position:relative;font-size:15px;border-bottom:1px dashed var(--line);}
+  .check-list li{padding:12px 0 12px 30px;position:relative;font-size:15px;border-bottom:1px dashed var(--line);line-height:1.8;}
   .check-list li:last-child{border-bottom:none;}
   .check-list li::before{content:"□";position:absolute;left:0;top:11px;color:var(--point);font-weight:700;font-size:17px;}
 
-  .step{display:flex;gap:14px;align-items:flex-start;padding:16px 0;border-bottom:1px dashed var(--line);}
+  .future{list-style:none;}
+  .future li{padding:16px 0;border-bottom:1px dashed var(--line);display:flex;gap:14px;align-items:flex-start;}
+  .future li:last-child{border-bottom:none;}
+  .future li .when{flex:none;width:76px;font-family:"Zen Old Mincho",serif;font-weight:700;font-size:15px;color:var(--point);padding-top:2px;}
+  .future li .what{flex:1;font-size:15px;line-height:1.8;}
+
+  .voice-card{background:var(--white);border:1px solid var(--line);border-left:5px solid var(--second);border-radius:0 12px 12px 0;padding:20px 20px;margin-bottom:16px;}
+  .voice-card .q{font-size:15px;line-height:1.85;margin-bottom:12px;}
+  .voice-card .who{font-size:13px;color:var(--sub);}
+
+  .n-block{background:var(--ink);color:#f3e9dc;border-radius:14px;padding:26px 22px;text-align:center;}
+  .n-block .mark{font-size:18px;line-height:1.9;margin-bottom:14px;font-family:"Zen Old Mincho",serif;}
+  .n-block .small{font-size:14px;color:#d9c3ac;line-height:1.9;}
+
+  .u-block{background:#fbeee6;border-radius:12px;padding:20px 20px;margin-bottom:14px;}
+  .u-block .label{font-size:13px;font-weight:700;color:var(--point);margin-bottom:6px;}
+  .u-block p{font-size:15px;line-height:1.85;}
+
+  /* 動画 */
+  .video-box{margin:20px 0;}
+  .video-frame{position:relative;width:100%;padding-top:56.25%;border-radius:12px;overflow:hidden;background:#000;}
+  .video-frame iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:0;}
+  .video-cap{font-size:13px;color:var(--sub);margin-top:10px;line-height:1.8;}
+
+  /* 3ステップ */
+  .step{display:flex;gap:14px;align-items:flex-start;padding:18px 0;border-bottom:1px dashed var(--line);}
   .step:last-child{border-bottom:none;}
   .step .num{
     flex:none;width:38px;height:38px;border-radius:50%;background:var(--ink);color:#fff;
     display:flex;align-items:center;justify-content:center;font-family:"Zen Old Mincho",serif;font-weight:700;font-size:16px;
   }
-  .step .body b{display:block;font-size:15px;margin-bottom:4px;}
-  .step .body span{font-size:14px;color:var(--sub);}
+  .step .body b{display:block;font-size:16px;margin-bottom:5px;font-family:"Zen Old Mincho",serif;}
+  .step .body span{font-size:14px;color:var(--sub);line-height:1.8;}
 
-  .voice-card{background:var(--white);border:1px solid var(--line);border-left:5px solid var(--second);border-radius:0 12px 12px 0;padding:20px 20px;margin-bottom:16px;}
-  .voice-card .q{font-size:15px;line-height:1.85;margin-bottom:12px;}
-  .voice-card .who{font-size:13px;color:var(--sub);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;}
-  .voice-card .who a{color:var(--point);font-weight:700;text-decoration:none;font-size:13px;}
-  .voice-card .who a:hover{text-decoration:underline;}
-
-  .u-block{background:#fbeee6;border-radius:12px;padding:20px 20px;margin-bottom:14px;}
-  .u-block .label{font-size:13px;font-weight:700;color:var(--point);margin-bottom:6px;}
-
-  .n-block{background:var(--ink);color:#f3e9dc;border-radius:14px;padding:26px 22px;text-align:center;}
-  .n-block .mark{font-size:15px;line-height:1.9;margin-bottom:14px;}
-  .n-block .small{font-size:13px;color:#d9c3ac;}
-
+  /* プラン */
   .plans{display:flex;flex-direction:column;gap:16px;}
   .plan{background:var(--white);border:1px solid var(--line);border-radius:16px;overflow:hidden;}
   .plan.rec{border-color:var(--point);box-shadow:0 4px 18px rgba(242,107,59,.15);}
-  .plan .head{padding:16px 20px;background:var(--bg);display:flex;justify-content:space-between;align-items:center;}
+  .plan .head{padding:16px 20px;background:var(--bg);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:6px;}
   .plan.rec .head{background:var(--point);color:#fff;}
-  .plan .head .name{font-family:"Zen Old Mincho",serif;font-weight:700;font-size:18px;}
-  .plan .head .tag{font-size:11px;background:var(--ink);color:#fff;padding:3px 9px;border-radius:20px;}
+  .plan .head .name{font-family:"Zen Old Mincho",serif;font-weight:700;font-size:19px;letter-spacing:.02em;}
+  .plan .head .tag{font-size:11px;background:var(--ink);color:#fff;padding:3px 9px;border-radius:20px;white-space:nowrap;}
   .plan.rec .head .tag{background:#fff;color:var(--point);}
+  .plan .planimg img{width:100%;height:auto;display:block;}
   .plan .body{padding:20px;}
+  .plan .forwho{font-size:14px;color:var(--second);font-weight:700;margin-bottom:12px;line-height:1.7;}
   .plan ul{list-style:none;margin-bottom:16px;}
   .plan ul li{padding:7px 0 7px 22px;position:relative;font-size:14px;}
   .plan ul li::before{content:"・";position:absolute;left:0;color:var(--sub);}
+  .plan .desc{font-size:14px;color:var(--sub);line-height:1.85;margin-bottom:16px;}
   .plan .price{text-align:center;padding-top:10px;border-top:1px dashed var(--line);}
   .plan .price .eur{font-family:"Zen Old Mincho",serif;font-weight:900;font-size:30px;color:var(--point);}
   .plan .price .jpy{font-size:13px;color:var(--sub);margin-top:4px;}
   .plan .start{text-align:center;font-size:12px;color:var(--second);margin-top:8px;font-weight:700;}
 
+  /* カリキュラム */
+  .term{margin-bottom:26px;}
+  .term-head{font-family:"Zen Old Mincho",serif;font-weight:700;font-size:15px;color:var(--point);
+    padding-bottom:6px;border-bottom:2px solid var(--line);margin-bottom:4px;}
+  .month{display:flex;gap:14px;align-items:flex-start;padding:13px 0;border-bottom:1px dashed var(--line);}
+  .month:last-child{border-bottom:none;}
+  .month .m{flex:none;width:52px;font-family:"Zen Old Mincho",serif;font-weight:700;font-size:15px;color:var(--sub);padding-top:1px;}
+  .month .t{flex:1;}
+  .month .t b{display:block;font-size:16px;font-family:"Zen Old Mincho",serif;margin-bottom:3px;}
+  .month .t span{font-size:13.5px;color:var(--sub);line-height:1.75;}
+
+  /* 90分の流れ */
+  .flow{list-style:none;counter-reset:flow;}
+  .flow li{padding:14px 0 14px 44px;position:relative;border-bottom:1px dashed var(--line);font-size:15px;line-height:1.85;}
+  .flow li:last-child{border-bottom:none;}
+  .flow li::before{
+    counter-increment:flow;content:counter(flow);
+    position:absolute;left:0;top:13px;width:30px;height:30px;border-radius:50%;
+    background:var(--ink);color:#fff;display:flex;align-items:center;justify-content:center;
+    font-family:"Zen Old Mincho",serif;font-size:14px;font-weight:700;
+  }
+
+  /* 実際の問い（試食） */
+  .taste{background:var(--white);border:2px dashed var(--point);border-radius:14px;padding:24px 22px;margin:20px 0;}
+  .taste .label{font-size:13px;font-weight:700;color:var(--point);margin-bottom:14px;}
+  .taste .q-item{padding:14px 0;border-bottom:1px dashed var(--line);}
+  .taste .q-item:last-child{border-bottom:none;padding-bottom:0;}
+  .taste .q-item .qt{font-family:"Zen Old Mincho",serif;font-size:16.5px;line-height:1.8;margin-bottom:6px;}
+  .taste .q-item .qs{font-size:13px;color:var(--sub);}
+
+  .quote-big{background:#fbeee6;border-radius:14px;padding:26px 22px;text-align:center;margin:22px 0;}
+  .quote-big .t{font-family:"Zen Old Mincho",serif;font-size:19px;line-height:1.75;color:var(--ink);}
+  .quote-big .s{font-size:13px;color:var(--sub);margin-top:10px;}
+
   .pay-table{width:100%;border-collapse:collapse;font-size:14px;}
   .pay-table th,.pay-table td{text-align:left;padding:12px 6px;border-bottom:1px solid var(--line);vertical-align:top;}
-  .pay-table th{width:34%;color:var(--sub);font-weight:500;}
+  .pay-table th{width:38%;color:var(--sub);font-weight:500;}
   .pay-table td{font-weight:700;}
 
   .faq{border-bottom:1px solid var(--line);padding:16px 0;}
   .faq:last-child{border-bottom:none;}
   .faq .q{font-weight:700;font-size:15px;margin-bottom:8px;display:flex;gap:8px;}
   .faq .q .qm{color:var(--point);flex:none;}
-  .faq .a{font-size:14px;color:var(--sub);padding-left:24px;}
+  .faq .a{font-size:14px;color:var(--sub);padding-left:24px;line-height:1.85;}
 
   .callout{background:#eaf5fb;border-radius:12px;padding:18px 20px;font-size:14px;color:#1a5a78;line-height:1.85;}
+
+  .deadline{background:var(--ink);color:#fff;border-radius:12px;padding:18px 20px;text-align:center;margin:20px 0;}
+  .deadline .d{font-family:"Zen Old Mincho",serif;font-size:18px;font-weight:700;}
+  .deadline .s{font-size:13px;color:#d9c3ac;margin-top:6px;}
 
   .form-sec{background:var(--white);border-top:3px solid var(--point);}
   form{margin-top:6px;}
@@ -118,7 +220,7 @@
   .radio-row{display:flex;flex-wrap:wrap;gap:10px;}
   .radio-opt{
     flex:1 1 auto;border:1px solid var(--line);border-radius:10px;padding:12px 14px;
-    font-size:14px;cursor:pointer;background:#fff;text-align:center;
+    font-size:14px;cursor:pointer;background:#fff;text-align:center;line-height:1.6;
   }
   .radio-opt input{margin-right:6px;accent-color:var(--point);}
   .check{display:flex;gap:10px;align-items:flex-start;background:var(--bg);border-radius:10px;padding:14px;font-size:14px;line-height:1.7;}
@@ -134,12 +236,17 @@
   #thanks{display:none;text-align:center;padding:30px 10px;}
   #thanks .mincho{font-size:20px;color:var(--point);margin-bottom:14px;}
 
-  .closing{background:var(--white);text-align:center;padding:44px 20px;border-top:1px solid var(--line);}
-  .closing .mincho{font-size:19px;line-height:1.8;color:var(--ink);}
-  .closing .actions{margin-top:22px;display:flex;flex-direction:column;gap:10px;max-width:320px;margin-left:auto;margin-right:auto;}
+  .closing{
+    position:relative;text-align:center;padding:70px 20px;
+    background-image:url("img/tour-hall.jpg");background-size:cover;background-position:center 38%;
+  }
+  .closing::before{content:"";position:absolute;inset:0;background:rgba(30,18,10,.72);}
+  .closing .wrap{position:relative;z-index:1;}
+  .closing .mincho{font-size:20px;line-height:1.9;color:#fff;text-shadow:0 2px 12px rgba(0,0,0,.5);}
+  .closing .actions{margin-top:26px;display:flex;flex-direction:column;gap:10px;max-width:320px;margin-left:auto;margin-right:auto;}
   .closing .actions a{
-    display:block;padding:13px;border-radius:10px;font-size:14px;font-weight:700;text-decoration:none;
-    border:1px solid var(--line);color:var(--ink);
+    display:block;padding:14px;border-radius:10px;font-size:14px;font-weight:700;text-decoration:none;
+    border:1px solid rgba(255,255,255,.5);color:#fff;
   }
   .closing .actions a.primary{background:var(--point);color:#fff;border-color:var(--point);}
 
@@ -149,175 +256,373 @@
 </head>
 <body>
 
+<!-- ============ D：違いの宣言 ============ -->
 <header class="hero">
   <div class="wrap">
-    <div class="eyebrow">オーガニック専門家コース 修了生限定のお知らせ</div>
-    <h1>修了は、ゴールじゃなかった。<br>学びを日常の言葉にしていく続きを、8月からつくります。</h1>
-    <div class="lead">メールレッスン・共同学習会・グループコンサル。<br>修了生のためのモニター価格でのご案内です。</div>
-    <img class="logo" src="iob-logo-orange.png" alt="Institut für Organic Business" width="190">
+    <div class="eyebrow">オーガニック専門家コースを受講してくださったみなさんへ</div>
+    <h1>ここは、<br class="sp">学ぶ場所ではありません。<br>挑戦し続ける人が、<br class="sp">集まる場所です。</h1>
+    <div class="lead">オーガニックを社会に広げるのは、知識をたくさん持った人ではなく、動き続ける人でした。<br>だから今回つくったのは、講座ではありません。9月から始めます。</div>
+    <img class="logo" src="iob-logo-orange.png" alt="Institut für Organic Business" width="170">
   </div>
+  <div class="hero-cap">2026年 ビオホテル・タナホフツアーにて</div>
 </header>
 
 <section>
   <div class="wrap">
     <div class="sec-eyebrow">はじめに</div>
-    <h2 class="sec-title">修了したあとも、一緒に育っていく場所を</h2>
-    <p>私たちは、修了証をお渡ししたら終わりの学校ではなく、修了したあとも一緒に育っていく場所であることを選びます。</p>
-    <p>知識は、使い続けなければ薄れていきます。そして、一人で学び続けるのはしんどいことを、私自身がずっと見てきました。</p>
-    <p>だから、修了後の365日にも、学びを置き続けます。</p>
+    <h2 class="sec-title">知識より先に、切れてしまうもの</h2>
+    <p>これまでたくさんの方に、オーガニックを学んでいただいてきました。そのなかで、はっきり見えてきたことがあります。</p>
+    <p>知識をどれだけ足しても、そこから先に進む人と、進まない人がいる。その差は、知識の量ではありませんでした。</p>
+    <p>先に切れるのは、いつも「続ける力」のほうです。</p>
+    <p>だから今回は、講座を増やすのをやめました。代わりに、挑戦が切れないようにする場所を3つ用意します。</p>
   </div>
 </section>
 
+<!-- ============ B：それで何が変わるか ============ -->
 <section class="alt">
   <div class="wrap">
-    <div class="sec-eyebrow">この続きで、変わっていくこと</div>
-    <h2 class="sec-title">3ヶ月後・半年後・1年後の暮らし</h2>
+    <div class="sec-eyebrow">この場所で、変わっていくこと</div>
+    <h2 class="sec-title">3ヶ月後・半年後・1年後</h2>
     <div class="card">
-      <ul class="check-list">
-        <li>3ヶ月後。「オーガニックって何?」と聞かれたとき、迷わず自分の言葉で答えている</li>
-        <li>半年後。自分の発信や仕事の中に、学んだ知識がすでに当たり前のように混ざっている</li>
-        <li>1年後。同じ道を歩く仲間と、月に一度は近況を話している</li>
+      <ul class="future">
+        <li><div class="when">3ヶ月後</div><div class="what">下書きのまま止まっていたことに、値段がついている</div></li>
+        <li><div class="when">半年後</div><div class="what">「これ、やります」と人前で言うのが、こわくなくなっている</div></li>
+        <li><div class="when">1年後</div><div class="what">うまくいかない月があっても、次の月にまた動ける自分になっている</div></li>
       </ul>
     </div>
-    <p>大きな達成の話ではありません。日々のちょっとした場面で、詰まらずに話せる自分になっていく。それだけのことです。</p>
+    <p>大きな成功の話ではありません。止まらなくなる、それだけのことです。でも、それがいちばん難しい。</p>
   </div>
 </section>
 
+<!-- ============ 竹松2：困っていること ============ -->
 <section>
   <div class="wrap">
-    <div class="sec-eyebrow">その証拠に</div>
-    <h2 class="sec-title">共同学習会は、こう続いてきました</h2>
-    <p>共同学習会は、2026年1月から毎月ライブで続けています。会社員、経営者、フリーランス、主婦の方。立場はバラバラでも、みんな同じ問いに向き合ってきました。「ビジネスからオーガニックを広げるために、自分にどう向き合うか」。</p>
-    <p>毎回、最後にひとりずつ感想を言い合う時間があります。この時間が、毎回宝物みたいになる。「毎日忙しくて過去を振り返る時間なんてなかった」と、みんな言うんです。だからこの会だけは絶対参加すると決めて、予定を空けてくれる人がいます。</p>
-
-    <div class="voice-card">
-      <div class="q">「お客様から『オーガニックの何がいいの』と聞かれて、うまく説明できなかった。勉強し直そうと思ってIOBに入りました」<br>今は、周りからのアドバイスが、そのまま自分の勉強になっています。「まだまだ勉強しないといけないことがあるな、と今も思っています」</div>
-      <div class="who"><span>古谷栄樹さん（兵庫県・農業）</span><a href="https://youtu.be/vLFB0WKrulA" target="_blank" rel="noopener">▶ 動画で見る</a></div>
+    <div class="sec-eyebrow">もし、ひとつでも当てはまったら</div>
+    <h2 class="sec-title">こんなふうになっていませんか</h2>
+    <div class="card">
+      <ul class="check-list">
+        <li>やりたいことはある。でも「いつか」のまま、3ヶ月が過ぎている</li>
+        <li>値段を決められなくて、下書きのまま止まっている</li>
+        <li>書きかけた投稿を、消してしまったことがある</li>
+        <li>相談したいことがあるのに、誰に聞けばいいのか分からない</li>
+        <li>うまくいかない時期に、自分の能力のせいだと思ってしまう</li>
+        <li>まわりに、同じことをしている人がいない</li>
+      </ul>
     </div>
-
-    <div class="voice-card">
-      <div class="q">「自分の軸を作って、それで会社をしっかり運営していきたい」という思いで入学。学んだあとは、お客様にも取引先にも、自信を持って話せるようになりました。「名刺にも、オーガニック専門家って書いてあるので」</div>
-      <div class="who"><span>久松麻紀さん（健康食品ブランド代表）</span><a href="https://youtu.be/QDMWgjHvRaU" target="_blank" rel="noopener">▶ 動画で見る</a></div>
-    </div>
-    <p style="font-size:13px;color:var(--sub);text-align:center;">ほかの修了生の声も、公開しています。<br><a href="https://www.youtube.com/playlist?list=PLC7ldLFCvgQgf1VTb2o4MUEl4UYon0t7q" target="_blank" rel="noopener" style="color:var(--point);font-weight:700;">▶ 修了生インタビューを再生リストで見る</a></p>
+    <p>これ、能力の問題ではありません。理由は、このあとに書きます。</p>
   </div>
 </section>
 
+<!-- ============ 竹松3：今まで何をしてきたか（承認） ============ -->
 <section class="alt">
+  <div class="wrap">
+    <div class="sec-eyebrow">ここまで、いろいろやってきたはずです</div>
+    <h2 class="sec-title">やってこなかったわけじゃない</h2>
+    <p>本を読んだ。講座を受けた。ノートに書き出した。アカウントをつくった。カレンダーに「やる日」を入れた。朝早く起きてみた。</p>
+    <p>どれも間違っていません。実際、それで進んだ部分もあるはずです。オーガニックの知識だって、ちゃんと積み上げてこられた。</p>
+    <p>それでも、途中で止まった。もう一度始めては、また止まった。</p>
+    <p>私も同じです。何度も止まってきました。</p>
+  </div>
+</section>
+
+<!-- ============ N：見えない敵 ============ -->
+<section>
+  <div class="wrap">
+    <div class="sec-eyebrow">止まる理由</div>
+    <h2 class="sec-title">原因は、ひとつだけでした</h2>
+    <div class="n-block">
+      <div class="mark">知識の量ではありません。<br>意志が弱いからでもありません。<br><br>一人だから、です。</div>
+      <div class="small">一人で決めて、一人で不安になって、一人で「まあ来月でいいか」と先送りする。<br>このループに入ると、どんなに力のある人でも止まります。</div>
+    </div>
+    <p style="margin-top:22px;">新しいことを始めるときは、とにかくパワーが要ります。値段を決める。人に見せる。「これ、やります」と口に出す。どれも、頭ではわかっていることばかりです。わかっているのに、手が止まる。</p>
+    <p>反対に、横に誰かいるだけで、拍子抜けするくらい進みます。次の1ヶ月にやることを、人の前で言う。それだけで、やる。うまくいかなかった話を聞いてくれる人がいる。それだけで、もう一回試す。</p>
+    <p>足りていなかったのは情報ではなく、環境のほうでした。</p>
+
+    <div class="photo">
+      <img src="img/tour-hall.jpg" alt="ビオホテル・タナホフツアーに参加したみなさん" loading="lazy">
+      <div class="cap">2026年のビオホテル・タナホフツアー。ドイツまで来てくれたみなさんと。こういう時間があると、帰ったあとの一歩が変わります。</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ E：証拠 ============ -->
+<section class="alt">
+  <div class="wrap">
+    <div class="sec-eyebrow">実際に、その反対側まで行った人</div>
+    <h2 class="sec-title">「入ってなかったら、成り立たない」</h2>
+    <p>ゆうきちゃん。ピラティスの講師をしながら、フルオーガニックの酵素ドリンク「Natural FLORA」をつくって販売しています。いま、40店舗以上に入っています。</p>
+    <p>はじめは、オーガニックの知識はゼロだったそうです。ゼロから学び直して、つくって、売り先を探して、いまがある。</p>
+
+    <div class="video-box">
+      <div class="video-frame">
+        <iframe src="https://www.youtube-nocookie.com/embed/l-K9DIoWZYg" title="ゆうきちゃんのお話" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+      </div>
+      <div class="video-cap">ゆうきちゃんのお話（4分53秒）</div>
+    </div>
+
+    <div class="voice-card">
+      <div class="q">「入ってなかったら、本当にビジネスも成り立たない」<br>「オーガニックのことを話せる仲間もいなかったと思う」</div>
+      <div class="who">ゆうきちゃん</div>
+    </div>
+
+    <p>私が何度も見返しているのは、後半のほうです。商品ができても、話せる相手がいない。値段のこと、原料のこと、伝え方のこと、相談できる人がいない。その状態で一人で続けるのは、正直しんどい。</p>
+    <p>ゆうきちゃんの取引先は、IOBで広がったご縁からつながっていきました。学んだ知識が売れたのではなくて、その場にいたから次の一歩が出た。私はそこを見ています。</p>
+  </div>
+</section>
+
+<!-- ============ U：なぜ今なのか（2段階） ============ -->
+<section>
   <div class="wrap">
     <div class="sec-eyebrow">なぜ、今なのか</div>
-    <h2 class="sec-title">仕組みが、今回はじめて揃いました</h2>
+    <h2 class="sec-title">これまでと、今回</h2>
+
     <div class="u-block">
       <div class="label">これまで</div>
-      <p>修了したあと、学びを続ける仕組みが、そもそもありませんでした。誰のせいでもありません。修了後の場所を、私が作ってこなかっただけです。</p>
+      <p>学んだあとに挑戦を続ける場所が、そもそもありませんでした。誰のせいでもありません。私が作ってこなかっただけです。だから、みなさんは一人で続けるしかなかった。それで止まったのは、当たり前のことでした。</p>
     </div>
+
     <div class="u-block">
       <div class="label">今回</div>
-      <p>クイズ、メールレッスン、共同学習会。ひとつひとつはずっと前からあったのに、修了生のための一本の道としてつなげたのは、今回が初めてです。</p>
+      <p>メールレッスン、共同学習会、リーダーズラウンジ。ひとつひとつは、ずっと前からありました。ただ、バラバラに動いていました。今回はじめて、この3つを一本の道としてつなげます。</p>
     </div>
-    <p>モニター価格でのご案内は、今回だけです。定員は設けていません。アンケートと取材にご協力いただくことだけをお願いしています。</p>
+
+    <p>モニター価格でのご案内は、今回だけです。定員は設けていません。人数で締め切ることもしません。お願いする条件は、アンケートと取材へのご協力だけです。</p>
   </div>
 </section>
 
-<section>
-  <div class="wrap">
-    <div class="n-block">
-      <div class="mark">「知ってるはずなのに、いざ聞かれると言葉が出てこない」<br><br>そう言ってくれた修了生が、一人じゃありませんでした。<br><br>これ、修了生のせいじゃないと思っています。<br>続ける仕組みを、私が作ってこなかっただけです。</div>
-      <div class="small">— レムケなつこ</div>
-    </div>
-  </div>
-</section>
-
+<!-- ============ I：新しい勝ち方（3ステップ） ============ -->
 <section class="alt">
   <div class="wrap">
-    <div class="sec-eyebrow">新しい勝ち方</div>
-    <h2 class="sec-title">梅・竹・松、3つの階段</h2>
-    <div class="card">
-      <div class="step">
-        <div class="num">1</div>
-        <div class="body"><b>毎日1通のメールで、知識を確かなものにする</b><span>OS認定資格のテスト対策も兼ねています（梅）</span></div>
-      </div>
-      <div class="step">
-        <div class="num">2</div>
-        <div class="body"><b>月1回の共同学習会で、事業の柱を組み立てる</b><span>相談ではなく、柱を組み立てる会です（竹）</span></div>
-      </div>
-      <div class="step">
-        <div class="num">3</div>
-        <div class="body"><b>月1回のグループコンサルで、ビジネスの詰まりを相談して解く</b><span>ビジネスの相談そのものです（松）</span></div>
-      </div>
+    <div class="sec-eyebrow">では、どうするか</div>
+    <h2 class="sec-title">続けるための、3つのステップ</h2>
+
+    <div class="step">
+      <div class="num">1</div>
+      <div class="body"><b>毎日1通で、手を動かす習慣をつくる</b><span>読むだけの日があってもかまいません。大事なのは、期間を区切って「自分がやったこと」を書いて出す時間があること。自分の分を書いて、人の分を読む。これだけで手が動き出します。</span></div>
+    </div>
+    <div class="step">
+      <div class="num">2</div>
+      <div class="body"><b>月に一度、事業の柱を組み立てる</b><span>何を、誰に、いくらで。ここが決まらないまま何年も止まっている人を、たくさん見てきました。一人だと決まらないものが、その場だと決まります。</span></div>
+    </div>
+    <div class="step">
+      <div class="num">3</div>
+      <div class="body"><b>月に一度、詰まりを相談して解く</b><span>次回までのアクションを自分の口で公言して、次の回で報告する。うまくいかなかったことも、そのまま持ってきてもらいます。</span></div>
+    </div>
+
+    <div class="quote-big" style="margin-top:26px;">
+      <div class="t">挑戦が続くかどうかは、<br>意志ではなく、<br>次に会う人がいるかどうかで決まります。</div>
     </div>
   </div>
 </section>
 
+<!-- ============ 3つのプラン ============ -->
 <section>
   <div class="wrap">
-    <div class="sec-eyebrow">まずは、ここから</div>
-    <h2 class="sec-title">5分でできる、最初の一歩</h2>
-    <p>いきなり申し込まなくて大丈夫です。まずは、公開しているクイズを1問だけ解いてみてください。今のあなたの知識レベルが、5分でわかります。</p>
-    <div class="callout">
-      <a href="https://iobschool.github.io/os-quiz/" target="_blank" rel="noopener" style="color:#1a5a78;font-weight:700;">▶ オーガニック知識クイズを試してみる</a>
-    </div>
-  </div>
-</section>
-
-<section class="alt">
-  <div class="wrap">
-    <div class="sec-eyebrow">ご案内内容</div>
-    <h2 class="sec-title">梅・竹・松（モニター価格）</h2>
+    <div class="sec-eyebrow">ご案内</div>
+    <h2 class="sec-title">3つの場所</h2>
+    <p>新しい看板は立てません。オーガニック専門家コースの続きに、3つの場所を足します。予算と、いま欲しいものの違いで選んでください。</p>
 
     <div class="plans">
-      <div class="plan">
-        <div class="head"><span class="name">梅</span><span class="tag">メールレッスン</span></div>
+
+      <div class="plan rec">
+        <div class="head">
+          <span class="name">Daily Letters</span>
+          <span class="tag">迷ったらここから</span>
+        </div>
         <div class="body">
+          <div class="forwho">まず自分のペースで始めたい人に</div>
           <ul>
-            <li>毎日1通、メールレッスン365日</li>
-            <li>OS認定資格のテスト対策つき</li>
+            <li>メールレッスン365日（認定資格テスト対策クイズ付き）</li>
+            <li>アウトプット期間（期間を区切って、BANDで受講者同士がシェアし合います）</li>
+            <li>年1〜2回、共同学習会にご招待</li>
           </ul>
-          <div class="price"><span class="eur">€280</span><div class="jpy" data-jpy-base="280">日本円 換算 約 <span class="jpy-amount">—</span></div></div>
+          <div class="desc">ステップ1にあたる場所です。毎日1通届いて、期間を区切って書いて出す。資格テストを受けたい方は、クイズがそのまま対策になります。</div>
+          <div class="price">
+            <div class="eur">€280</div>
+            <div class="jpy" data-jpy-base="280">日本円 換算 約 <span class="jpy-amount">51,100円</span></div>
+          </div>
           <div class="start">9月中旬 開始</div>
         </div>
       </div>
 
-      <div class="plan rec">
-        <div class="head"><span class="name">竹</span><span class="tag">梅 ＋ 共同学習会</span></div>
+      <div class="plan">
+        <div class="head">
+          <span class="name">Founders Table</span>
+          <span class="tag">10月から新グループ</span>
+        </div>
         <div class="body">
+          <div class="forwho">「何を、誰に、いくらで」が決まらないまま止まっている人に</div>
           <ul>
-            <li>梅の内容すべて</li>
-            <li>共同学習会（月1回）＝事業の柱を組み立てる会</li>
+            <li>Daily Letters の内容すべて</li>
+            <li>共同学習会（月1回・90分・少人数）</li>
           </ul>
-          <div class="price"><span class="eur">€540</span><div class="jpy" data-jpy-base="540">日本円 換算 約 <span class="jpy-amount">—</span></div></div>
+          <div class="desc">ステップ1と2。月に一度集まって、自分の事業の柱を組み立てます。12ヶ月で何をやるかは、このすぐ下に全部書いています。</div>
+          <div class="price">
+            <div class="eur">€540</div>
+            <div class="jpy" data-jpy-base="540">日本円 換算 約 <span class="jpy-amount">98,600円</span></div>
+          </div>
           <div class="start">10月 開始</div>
         </div>
       </div>
 
       <div class="plan">
-        <div class="head"><span class="name">松</span><span class="tag">竹 ＋ グループコンサル</span></div>
+        <div class="head">
+          <span class="name">Leaders Lounge</span>
+          <span class="tag">10月から新グループ</span>
+        </div>
+        <div class="planimg">
+          <img src="img/tour-lounge.jpg" alt="ビオホテルのラウンジに集まったみなさん" loading="lazy">
+        </div>
         <div class="body">
+          <div class="forwho">すでに動いていて、相談できる相手がほしい人に</div>
           <ul>
-            <li>竹の内容すべて</li>
-            <li>グループコンサル（月1回）＝ビジネスの相談</li>
+            <li>Founders Table の内容すべて</li>
+            <li>リーダーズラウンジ（月1回・グループコンサル）</li>
           </ul>
-          <div class="price"><span class="eur">€850</span><div class="jpy" data-jpy-base="850">日本円 換算 約 <span class="jpy-amount">—</span></div></div>
+          <div class="desc">ステップ1と2と3。商品はある、お客さんもいる、でも一人で決め続けるのがしんどい。そういう方に。去年12月の回を最後にいったん止めていて、10月から新しいグループで再開します。</div>
+          <div class="price">
+            <div class="eur">€850</div>
+            <div class="jpy" data-jpy-base="850">日本円 換算 約 <span class="jpy-amount">155,200円</span></div>
+          </div>
           <div class="start">10月 開始</div>
         </div>
       </div>
+
     </div>
-    <p style="font-size:12px;color:var(--sub);text-align:center;margin-top:6px;" id="rateNote">日本円の金額は、その日の為替レートで自動的に計算した目安です。お支払いはユーロ建てになります。</p>
+
+    <p id="rateNote" style="font-size:13px;color:var(--sub);margin-top:16px;">日本円の金額は、その日の為替レートで自動的に計算した目安です。お支払いはユーロ建てになります。</p>
   </div>
 </section>
 
+<!-- ============ 中身を全部見せる ============ -->
+<section class="alt">
+  <div class="wrap">
+    <div class="sec-eyebrow">中身を全部お見せします</div>
+    <h2 class="sec-title">共同学習会の12ヶ月</h2>
+    <p>Founders Table と Leaders Lounge に入っている共同学習会は、月1回・90分・少人数。12ヶ月で12のテーマを回ります。</p>
+    <div class="callout" style="margin-bottom:24px;">これは新しいグループとして10月から始まります。途中から入るのではありません。全員が同じ月からのスタートです。</div>
+
+    <div class="term">
+      <div class="term-head">第1期　土台と種まき</div>
+      <div class="month"><div class="m">10月</div><div class="t"><b>繋がる</b><span>仲間の存在を知る／自己紹介ワーク（現在地と未来の共有）</span></div></div>
+      <div class="month"><div class="m">11月</div><div class="t"><b>絞る</b><span>誰のための専門家か／ターゲット設定と初期コンセプト設計</span></div></div>
+      <div class="month"><div class="m">12月</div><div class="t"><b>掘る</b><span>軸の言語化／自分の「信念・価値観」を言葉にする</span></div></div>
+    </div>
+
+    <div class="term">
+      <div class="term-head">第2期　芽吹きと基準値</div>
+      <div class="month"><div class="m">1月</div><div class="t"><b>魅せる</b><span>専門家としての世界観／プロフィール・SNS発信の軸を固める</span></div></div>
+      <div class="month"><div class="m">2月</div><div class="t"><b>高める</b><span>媚びない・お願いしない／顧客との対等な関係性</span></div></div>
+      <div class="month"><div class="m">3月</div><div class="t"><b>深める</b><span>権威性と信頼の構築／「選ばれる理由」の言語化</span></div></div>
+    </div>
+
+    <div class="term">
+      <div class="term-head">第3期　成長と商品化</div>
+      <div class="month"><div class="m">4月</div><div class="t"><b>描く</b><span>理想の顧客の未来／ベネフィット整理</span></div></div>
+      <div class="month"><div class="m">5月</div><div class="t"><b>形にする</b><span>価値のパッケージ化／ミニサービス・体験コンテンツの企画</span></div></div>
+      <div class="month"><div class="m">6月</div><div class="t"><b>伝える</b><span>心を動かすライティング／自分の言葉で「価値」を伝える発信練習</span></div></div>
+    </div>
+
+    <div class="term">
+      <div class="term-head">第4期　開花と循環</div>
+      <div class="month"><div class="m">7月</div><div class="t"><b>導く</b><span>リーダーとしての自覚／顧客をコミュニティへ巻き込む力</span></div></div>
+      <div class="month"><div class="m">8月</div><div class="t"><b>広げる</b><span>継続的な関係づくり／次のステップへ</span></div></div>
+      <div class="month"><div class="m">9月</div><div class="t"><b>祝う</b><span>12ヶ月の集大成／ミッション・ビジョン最終発表会（2027年9月）</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 90分の流れ＋試食の一口 ============ -->
+<section>
+  <div class="wrap">
+    <div class="sec-eyebrow">毎回の90分</div>
+    <h2 class="sec-title">こんなふうに進みます</h2>
+    <ol class="flow">
+      <li><b>チェックイン。</b>近況を一言ずつ。うまくいっていない話でもかまいません。</li>
+      <li><b>ワーク。</b>3ステップで手を動かします。考えるだけで終わらせません。</li>
+      <li><b>シェア。</b>書いたものを一人ずつ読み上げます。聞き手は、問いにひとつだけ答える。</li>
+      <li><b>持ち帰り課題。</b>次回までにやることを決めて、BANDに報告します。</li>
+      <li><b>最後に、全員で写真を撮ります。</b></li>
+    </ol>
+
+    <div class="taste">
+      <div class="label">実際に、こんな問いが出ます</div>
+      <div class="q-item">
+        <div class="qt">「この1ヶ月で、嬉しかったこと、モヤモヤしたこと。ひとつだけ」</div>
+        <div class="qs">毎回のチェックインで、最初に聞かれることです</div>
+      </div>
+      <div class="q-item">
+        <div class="qt">「理想のお客さんを一人だけ決めて、その人に名前をつけてください」</div>
+        <div class="qs">実在する人でかまいません。名前をつけると、その人が頭の中で動き出します</div>
+      </div>
+      <div class="q-item">
+        <div class="qt">「◯◯したい。でも△△でもある。<br>その人の矛盾する2つの気持ちを、代わりに言葉にしてください」</div>
+        <div class="qs">ここが書けるようになると、伝わり方が変わります</div>
+      </div>
+    </div>
+
+    <div class="quote-big">
+      <div class="t">正解を出す場ではなく、<br>未完成を出していい場</div>
+      <div class="s">共同学習会のスライドに、こう書いてあります</div>
+    </div>
+
+    <p>きれいにまとまってから持ってくる必要はありません。というより、まとまらないから持ってくる場所です。</p>
+    <p>2月の「媚びない・お願いしない」あたりで、毎回みんなの顔つきが変わります。値段を下げてしまう、無料で相談に乗りすぎてしまう、断れない。このへんは一人で直そうとしても、まず直らない。</p>
+  </div>
+</section>
+
+<!-- ============ C：事例 ============ -->
+<section class="alt">
+  <div class="wrap">
+    <div class="sec-eyebrow">実際に参加した人の言葉</div>
+    <h2 class="sec-title">「みんな同じなのだ」と安心できた</h2>
+    <p>去年12月のグループコンサルのあと、参加者にアンケートを取りました。「一言で表すと?」という質問への答えが、これです。</p>
+
+    <div class="voice-card">
+      <div class="q">「新しいことにチャレンジする時はすごくパワーがいる。仲間とそれをシェアすることで、背中を押してもらえる」<br><br>「before やりたいことがあっても足踏み状態。進んでない。毎回目標を立てることで、仲間意識とワクワクと前進しているのを実感」</div>
+      <div class="who">かのちゃん ／ 一言で表すと「自分をアップグレードできる場所」</div>
+    </div>
+
+    <div class="voice-card">
+      <div class="q">「自分だけが大変なのではなく、みんなが目的を達成するために試行錯誤していることがわかり、みんな同じなのだと安心できた」</div>
+      <div class="who">けーこちゃん</div>
+    </div>
+
+    <div class="voice-card">
+      <div class="q">「基本的に一人で仕事を進めていることがほとんどで、不安になった時に悩み相談できる仲間がいることを実感しました」<br><br>「グルコンだから話せるリアルな悩みに本気で寄り添って、アドバイスをいただけて、実際に商品を手に取っていただけて、こんなに暖かい世界があるんだなと思いました」</div>
+      <div class="who">ゆうきちゃん ／ 一言で表すと「思いを形にできる場所」</div>
+    </div>
+
+    <p>けーこちゃんの「みんな同じなのだ」という一行を、私は何度も読み返しました。一人でやっていると、うまくいかない時期を自分の能力の問題だと片づけがちです。実際は、全員が同じところで詰まっています。それが見えるだけで、次の月も続けられる。</p>
+
+    <h3 class="sec-title" style="margin-top:34px;">もう一人、北海道から</h3>
+    <p>余市町のえりちゃん。ご主人がワイン用のぶどうを育てていて、えりちゃんは野菜畑と家畜と料理を担当しています。「オーガニックの知識はある」と思っていたそうです。学んでみたら、知っていたのは1%だった、と。</p>
+
+    <div class="video-box">
+      <div class="video-frame">
+        <iframe src="https://www.youtube-nocookie.com/embed/OlyG-AKINbQ" title="えりちゃんのお話" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+      </div>
+      <div class="video-cap">えりちゃんのお話（2分33秒）</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 価格・支払い ============ -->
 <section>
   <div class="wrap">
     <div class="sec-eyebrow">お支払いについて</div>
     <h2 class="sec-title">決済方法</h2>
-    <div class="card">
-      <table class="pay-table">
-        <tr><th>銀行振込（日本・ドイツ）</th><td>一括のみ</td></tr>
-        <tr><th>梅（メールレッスン）</th><td>決済手段を問わず一括のみ</td></tr>
-        <tr><th>竹・松（Stripe／PayPal）</th><td>一括、または3回までの分割払いが選べます</td></tr>
-      </table>
+    <table class="pay-table">
+      <tr><th>銀行振込（日本・ドイツ）</th><td>一括のみ</td></tr>
+      <tr><th>Daily Letters</th><td>決済手段を問わず一括のみ</td></tr>
+      <tr><th>Founders Table・Leaders Lounge<br>（Stripe／PayPal）</th><td>一括、または3回までの分割払いが選べます</td></tr>
+    </table>
+    <p class="callout" style="margin-top:18px;">Stripe・PayPalの決済リンクは、お申し込みフォーム送信後の自動返信メールでご案内します。</p>
+
+    <div class="deadline">
+      <div class="d">受付は 2026年9月2日（水）23:59 まで</div>
+      <div class="s">日本時間。定員は設けていません</div>
     </div>
-    <div class="callout">Stripe・PayPalの決済リンクは、お申し込みフォーム送信後の自動返信メールでご案内します。準備が整い次第、順次お送りします。</div>
   </div>
 </section>
 
@@ -330,29 +635,65 @@
   </div>
 </section>
 
+<!-- ============ FAQ ============ -->
 <section>
   <div class="wrap">
     <div class="sec-eyebrow">よくある質問</div>
     <h2 class="sec-title">お申し込み前に</h2>
+
     <div class="faq">
-      <div class="q"><span class="qm">Q</span>途中でプランを変更できますか？</div>
-      <div class="a">はい。梅から竹・松へのステップアップは、いつでもご相談いただけます。差額分をお支払いいただく形でご案内します。</div>
+      <div class="q"><span class="qm">Q</span><span>認定資格を取っていません。参加できますか?</span></div>
+      <div class="a">できます。資格の有無で分ける場所ではありません。共同学習会でやるのは、自分の事業をどう組み立てるかです。テストではないので。</div>
     </div>
+
     <div class="faq">
-      <div class="q"><span class="qm">Q</span>共同学習会・グループコンサルはオンラインですか？</div>
+      <div class="q"><span class="qm">Q</span><span>途中で止まったままです。今さら戻れますか?</span></div>
+      <div class="a">戻れます。というより、途中で止まっている人のほうが多いです。仕事が忙しくなった、体調を崩した、家のことがあった。全部、よくあることです。戻ってくるのに理由の説明は要りません。</div>
+    </div>
+
+    <div class="faq">
+      <div class="q"><span class="qm">Q</span><span>毎日メールを読む時間がありません。</span></div>
+      <div class="a">読むだけの日があっていいし、開かない日があってもかまいません。Daily Letters で大事なのは、期間を区切ったアウトプットのほうです。そこで自分のやったことを書いて出す。それだけで手が動きます。</div>
+    </div>
+
+    <div class="faq">
+      <div class="q"><span class="qm">Q</span><span>一人で参加して浮きませんか?</span></div>
+      <div class="a">共同学習会は少人数で、10月に新しく立ち上がるグループです。できあがった輪に途中から入るのではなく、全員が同じ月からのスタートです。そして、みんな同じところで詰まっています。値段、伝え方、最初の一歩。</div>
+    </div>
+
+    <div class="faq">
+      <div class="q"><span class="qm">Q</span><span>共同学習会・グループコンサルはオンラインですか?</span></div>
       <div class="a">はい、オンラインでの開催です。日程は、お申し込み後にご案内します。</div>
     </div>
+
     <div class="faq">
-      <div class="q"><span class="qm">Q</span>修了生でなくても申し込めますか？</div>
-      <div class="a">今回は、オーガニック専門家コースの修了生・在校生向けのご案内です。まずは公式LINEやメールでお問い合わせください。</div>
+      <div class="q"><span class="qm">Q</span><span>あとからプランを変えられますか?</span></div>
+      <div class="a">変えられます。上のプランに移るときは、差額をお支払いいただく形です。下に移ることもできますが、その場合の差額の返金はありません。</div>
     </div>
+
     <div class="faq">
-      <div class="q"><span class="qm">Q</span>締切はいつですか？</div>
-      <div class="a">モニター価格でのお申し込みは、2026年8月31日までです。定員は設けていません。</div>
+      <div class="q"><span class="qm">Q</span><span>途中でやめた場合、返金はありますか?</span></div>
+      <div class="a">返金は行っていません。この点だけ、申し込む前にお伝えしておきます。</div>
+    </div>
+
+    <div class="faq">
+      <div class="q"><span class="qm">Q</span><span>締切はいつですか?</span></div>
+      <div class="a">モニター価格でのお申し込みは、2026年9月2日（水）23:59（日本時間）までです。定員は設けていません。</div>
     </div>
   </div>
 </section>
 
+<!-- ============ K：軽い一歩 ============ -->
+<section class="alt">
+  <div class="wrap">
+    <div class="sec-eyebrow">まずは、ここから</div>
+    <h2 class="sec-title">5分でできる、最初の一歩</h2>
+    <p>いきなり申し込まなくて大丈夫です。まずは、公開しているクイズを1問だけ解いてみてください。今の自分がどのくらい説明できるか、5分でわかります。</p>
+    <p style="margin-top:16px;"><a href="https://iobschool.github.io/os-quiz/" target="_blank" rel="noopener" style="color:var(--point);font-weight:700;text-decoration:none;font-size:16px;">▶ オーガニック知識クイズを試してみる</a></p>
+  </div>
+</section>
+
+<!-- ============ 申込フォーム ============ -->
 <section class="form-sec">
   <div class="wrap">
     <div class="sec-eyebrow">お申し込み</div>
@@ -370,9 +711,9 @@
       <div class="field">
         <label>お申し込みプラン<span class="req">必須</span></label>
         <div class="radio-row">
-          <label class="radio-opt"><input type="radio" name="plan" value="梅（メールレッスン €280）" required>梅<br>€280</label>
-          <label class="radio-opt"><input type="radio" name="plan" value="竹（梅＋共同学習会 €540）">竹<br>€540</label>
-          <label class="radio-opt"><input type="radio" name="plan" value="松（竹＋グルコン €850）">松<br>€850</label>
+          <label class="radio-opt"><input type="radio" name="plan" value="Daily Letters（€280）" required>Daily Letters<br>€280</label>
+          <label class="radio-opt"><input type="radio" name="plan" value="Founders Table（€540）">Founders Table<br>€540</label>
+          <label class="radio-opt"><input type="radio" name="plan" value="Leaders Lounge（€850）">Leaders Lounge<br>€850</label>
         </div>
       </div>
       <div class="field">
@@ -385,7 +726,7 @@
         </div>
       </div>
       <div class="field">
-        <label>お支払い回数<span class="opt">任意・竹/松でStripe/PayPalの場合のみ選べます</span></label>
+        <label>お支払い回数<span class="opt">任意・Founders Table / Leaders Lounge で Stripe / PayPal の場合のみ選べます</span></label>
         <div class="radio-row">
           <label class="radio-opt"><input type="radio" name="installment" value="一括" checked>一括</label>
           <label class="radio-opt"><input type="radio" name="installment" value="3回分割">3回分割</label>
@@ -408,7 +749,7 @@
         <div class="check">
           <input type="checkbox" id="agree" required>
           <label for="agree" style="font-weight:400;margin:0;">
-            上記のプラン内容・モニター条件（アンケート・取材へのご協力）、ならびに<a href="terms.html" target="_blank" rel="noopener" style="color:var(--point);font-weight:700;">受講規約</a>・<a href="privacy.html" style="color:var(--point);font-weight:700;">プライバシーポリシー</a>・<a href="tokushoho.html" style="color:var(--point);font-weight:700;">特定商取引法に基づく表記</a>を確認し、同意のうえお申し込みします。
+            上記のプラン内容・モニター条件（アンケート・取材へのご協力）・返金に関する記載、ならびに<a href="terms.html" target="_blank" rel="noopener" style="color:var(--point);font-weight:700;">受講規約</a>・<a href="privacy.html" style="color:var(--point);font-weight:700;">プライバシーポリシー</a>・<a href="tokushoho.html" style="color:var(--point);font-weight:700;">特定商取引法に基づく表記</a>を確認し、同意のうえお申し込みします。
           </label>
         </div>
       </div>
@@ -421,14 +762,14 @@
       <div class="mincho">お申し込みありがとうございます。</div>
       <p>確認のため、ご登録のメールアドレス宛に<br>自動返信メールをお送りしました。<br><br>
       お支払いのご案内が記載されていますので、<br>ご確認をお願いいたします。<br><br>
-      これから、また一緒に学んでいけたら嬉しいです。</p>
+      9月に、一緒に始めましょう。</p>
     </div>
   </div>
 </section>
 
 <div class="closing">
   <div class="wrap">
-    <p class="mincho">これを読んでくれたあなたも、修了生の一人。<br>ここから、また一緒に学んでいけたら嬉しいです。</p>
+    <p class="mincho">挑戦にはパワーが要って、<br>そのパワーは一人だと切れる。<br><br>切れないようにする場所を、つくりました。</p>
     <div class="actions">
       <a class="primary" href="#applyForm">申し込みフォームへ</a>
       <a href="https://iobschool.github.io/os-quiz/" target="_blank" rel="noopener">まずはクイズを1問だけ</a>
@@ -446,9 +787,9 @@
 </footer>
 
 <script>
-  // ── 受付期限：2026年8月31日（JST）いっぱいで自動的にモニター価格の案内を終了 ──
+  // ── 受付期限：2026年9月2日23:59（JST）いっぱいでモニター価格の案内を終了 ──
   (function(){
-    var deadline = Date.UTC(2026, 8, 1, 15, 0, 0); // 2026-09-01 00:00 JST
+    var deadline = Date.UTC(2026, 8, 2, 15, 0, 0); // 2026-09-03 00:00 JST
     if (Date.now() >= deadline) {
       var note = document.getElementById('rateNote');
       if (note) note.textContent = "モニター価格でのご案内期間は終了しました。お問い合わせは school@iob.bio まで。";
@@ -501,11 +842,13 @@
       message: form.message.value
     };
 
+    // GASは exec → googleusercontent へ302リダイレクトされ、POSTがGETに変換されることがある。
+    // そのため payload をURLエンコードで送り、GAS側は doPost / doGet の両方で受ける。
     fetch(GAS_URL, {
       method:"POST",
       mode:"no-cors",
-      headers:{"Content-Type":"text/plain;charset=utf-8"},
-      body: JSON.stringify(data)
+      headers:{"Content-Type":"application/x-www-form-urlencoded;charset=utf-8"},
+      body: new URLSearchParams({ payload: JSON.stringify(data) })
     }).then(function(){
       form.style.display="none";
       document.getElementById('thanks').style.display="block";
