@@ -138,6 +138,21 @@
   .step .body b{display:block;font-size:16px;margin-bottom:5px;font-family:"Zen Old Mincho",serif;}
   .step .body span{font-size:14px;color:var(--sub);line-height:1.8;}
 
+  /* 3プランの積み上げ図 */
+  .tier-diagram{margin:22px 0 26px;}
+  .tier{border-radius:14px;padding:16px 18px;text-align:center;margin:0 auto;}
+  .tier .tname{font-family:"Zen Old Mincho",serif;font-weight:700;font-size:16px;}
+  .tier .tprice{font-family:"Zen Old Mincho",serif;font-weight:900;font-size:21px;margin-top:2px;}
+  .tier .tfor{font-size:12px;margin-top:5px;line-height:1.6;}
+  .tier.t1{width:100%;background:var(--white);border:1px solid var(--line);}
+  .tier.t1 .tfor{color:var(--sub);}
+  .tier.t2{width:87%;background:var(--white);border:1.5px solid var(--point);}
+  .tier.t2 .tfor{color:var(--sub);}
+  .tier.t3{width:74%;background:var(--point);color:#fff;}
+  .tier.t3 .tfor{color:#fdeadf;}
+  .tier-add{text-align:center;font-size:12px;color:var(--sub);margin:8px 0;font-weight:700;}
+  .tier-add::before{content:"＋ ";color:var(--point);}
+
   /* プラン */
   .plans{display:flex;flex-direction:column;gap:16px;}
   .plan{background:var(--white);border:1px solid var(--line);border-radius:16px;overflow:hidden;}
@@ -204,6 +219,29 @@
   .faq .a{font-size:14px;color:var(--sub);padding-left:24px;line-height:1.85;}
 
   .callout{background:#eaf5fb;border-radius:12px;padding:18px 20px;font-size:14px;color:#1a5a78;line-height:1.85;}
+
+  /* 軽い一歩の2つの入口 */
+  .try-list{display:flex;flex-direction:column;gap:12px;margin-top:18px;}
+  .try{
+    display:block;text-decoration:none;color:var(--ink);
+    background:var(--bg);border:1.5px solid var(--line);border-radius:14px;
+    padding:18px 18px;transition:border-color .15s ease,background .15s ease;
+  }
+  .try:hover{border-color:var(--point);background:#fbeee6;}
+  .try.main{border-color:var(--point);background:#fbeee6;}
+  .try .tlabel{font-size:11.5px;font-weight:700;color:var(--point);letter-spacing:.04em;margin-bottom:5px;}
+  .try .ttitle{font-family:"Zen Old Mincho",serif;font-weight:700;font-size:17px;line-height:1.6;}
+  .try .tdesc{font-size:13.5px;color:var(--sub);line-height:1.8;margin-top:6px;}
+  .try .tgo{font-size:13.5px;color:var(--point);font-weight:700;margin-top:9px;}
+
+  /* 詳細ゾーンへの区切り */
+  .detail-divider{text-align:center;padding:30px 0 10px;}
+  .detail-divider span{
+    display:inline-block;background:var(--point);color:#fff;
+    font-size:13.5px;font-weight:700;letter-spacing:.03em;
+    padding:10px 22px;border-radius:999px;
+    box-shadow:0 6px 16px rgba(242,107,59,.28);
+  }
 
   .deadline{background:var(--ink);color:#fff;border-radius:12px;padding:18px 20px;text-align:center;margin:20px 0;}
   .deadline .d{font-family:"Zen Old Mincho",serif;font-size:18px;font-weight:700;}
@@ -392,7 +430,7 @@
 
     <div class="u-block">
       <div class="label">今回</div>
-      <p>メールレッスン、共同学習会、リーダーズラウンジ。この3つを、挑戦を続けるためのひとつの環境として組み直しました。<span class="hl">メールレッスンだけでも始められて、共同学習会、リーダーズラウンジと、必要な分だけ足していけます</span>。全員が10月に、新しいグループで一緒にスタートします。</p>
+      <p>メールレッスン、共同学習会、リーダーズラウンジという名のグルコン。この3つを、挑戦を続けるためのひとつの環境として組み直しました。<span class="hl">メールレッスンだけでも始められて、共同学習会、リーダーズラウンジと、必要な分だけ足していけます</span>。全員が10月に、新しいグループで一緒にスタートします。</p>
     </div>
 
     <p><span class="hl">今回は、モニター価格で募集します。</span>定員はありませんが、少人数になると思います。モニターの条件は、アンケートと取材へのご協力だけです。</p>
@@ -409,15 +447,15 @@
 
     <div class="step">
       <div class="num">1</div>
-      <div class="body"><b>メールレッスン｜毎日1通で、手を動かす習慣をつくる</b><span>毎日、メールが1通届きます。読むだけの日があってもかまいません。期間を区切った「アウトプット期間」に、自分のやったことを書いて出して、仲間の分を読む。これだけで手が動き出します。</span></div>
+      <div class="body"><b>365日メールレッスン｜毎日1通で、手を動かす習慣をつくる</b><span>毎日、レムケなつこからメールが1通届きます。テキストと、5〜10分のオーガニック専門家コースのショート動画がセットになっていて、通勤のすきま時間に見るだけでも学びが積み重なっていきます。読むだけ、見るだけの日があってもかまいません。決められた期間だけ、その日のメールの問いへの自分の答えをBANDに書いて、仲間の分も読む。これだけで手が動き出します。</span></div>
     </div>
     <div class="step">
       <div class="num">2</div>
-      <div class="body"><b>共同学習会｜月1回、仲間と事業の柱を組み立てる</b><span>月1回・90分・少人数のオンライン学習会です。何を、誰に、いくらで。一人だと決まらないことが、この場だと決まります。</span></div>
+      <div class="body"><b>共同学習会｜月1回、仲間と事業の柱を組み立てる</b><span>月1回・90分・少人数のオンライン学習会です。何を、誰に、いくらで。一人だと決まらないことが、この場だと決まります。近況を話すチェックインから始まり、3ステップのワーク、書いたものをシェアする時間まで、90分の中に手を動かす工程が全部入っています。10月から12ヶ月かけて「繋がる」「絞る」「掘る」といったテーマを順番に進み、9月には最終発表会もあります。</span></div>
     </div>
     <div class="step">
       <div class="num">3</div>
-      <div class="body"><b>リーダーズラウンジ｜月1回、ビジネスの相談をする</b><span>月1回のグループコンサルです。次回までにやることをみんなの前で宣言して、次の回で報告する。うまくいかなかった話も、そのまま持ってきてもらいます。</span></div>
+      <div class="body"><b>リーダーズラウンジ｜月1回、ビジネスの相談をする</b><span>月1回のグループコンサルです。次回までにやることをみんなの前で宣言して、次の回で報告する。うまくいかなかった話も、そのまま持ってきてもらいます。去年12月の回を最後にいったん止めていましたが、10月から新しいグループとして再開します。参加した人たちは「自分をアップグレードできる場所」「思いを形にできる場所」と言っています。一人で抱えていた迷いを、その場で言葉にして、答えを持ち帰れます。</span></div>
     </div>
 
   </div>
@@ -428,11 +466,29 @@
   <div class="wrap">
     <div class="sec-eyebrow">ご案内</div>
     <h2 class="sec-title">3つの場所から、選べます</h2>
-    <p>新しい看板は立てません。オーガニック専門家コースの続きに、3つの場所を足します。予算と、いま欲しいものの違いで選んでください。</p>
+    <p>オーガニック専門家コースの続きに、3つの場所を用意しました。今、欲しいものに合わせて選んでください。</p>
+
+    <div class="tier-diagram">
+      <div class="tier t1">
+        <div class="tname">Daily Letters　€280</div>
+        <div class="tfor">まず自分のペースで始めたい人に</div>
+      </div>
+      <div class="tier-add">共同学習会（月1回・事業の柱を組む）</div>
+      <div class="tier t2">
+        <div class="tname">Founders Table　€540</div>
+        <div class="tfor">「何を、誰に、いくらで」を決めたい人に</div>
+      </div>
+      <div class="tier-add">リーダーズラウンジ（月1回・ビジネスの相談）</div>
+      <div class="tier t3">
+        <div class="tname">Leaders Lounge　€850</div>
+        <div class="tfor">相談できる相手がほしい人に</div>
+      </div>
+    </div>
+    <p style="font-size:12.5px;color:var(--sub);text-align:center;margin-top:-14px;margin-bottom:22px;">下のプランほど、上のプランの内容をすべて含みます</p>
 
     <div class="plans">
 
-      <div class="plan rec">
+      <div class="plan rec" id="plan-daily">
         <div class="head">
           <span class="name">Daily Letters</span>
           <span class="tag">迷ったらここから</span>
@@ -440,11 +496,11 @@
         <div class="body">
           <div class="forwho">まず自分のペースで始めたい人に</div>
           <ul>
-            <li>メールレッスン365日（認定資格テスト対策クイズ付き）</li>
-            <li>アウトプット期間（期間を区切って、BANDで受講者同士がシェアし合います）</li>
-            <li>年1〜2回、共同学習会にご招待</li>
+            <li><b>メールレッスン365日</b>｜有機農業の原理から、認証、栄養素、環境、SDGsまで。1日ひとつ、知識が積み上がります（認定資格対策クイズ付き）</li>
+            <li><b>決められた期間だけ、書いて出す</b>｜その日のメールの問いへの自分の答えをBANDに投稿します。ほかの受講生の投稿も読めるので、一人で読むだけで終わりません</li>
+            <li><b>共同学習会に年1〜2回ご招待</b>｜メールの向こうにいる仲間と、実際に顔を合わせる機会があります（<a href="#curriculum" style="color:var(--point);font-weight:700;text-decoration:none;">→ 共同学習会の中身を見る</a>）</li>
           </ul>
-          <div class="desc">中身はメールレッスンです。毎日1通届いて、期間を区切って書いて出す。資格テストを受けたい方は、クイズがそのまま対策になります。</div>
+          <div class="desc">毎日ひとつ知識を積み上げながら、期間を区切ったアウトプットで「書いて出す」感覚に慣れていく場所です。まずはここから始めて、物足りなくなったら他のプランに移れます。</div>
           <div class="price">
             <div class="eur">€280</div>
           </div>
@@ -452,7 +508,7 @@
         </div>
       </div>
 
-      <div class="plan">
+      <div class="plan" id="plan-founders">
         <div class="head">
           <span class="name">Founders Table</span>
           <span class="tag">10月から新グループ</span>
@@ -463,7 +519,7 @@
             <li>Daily Letters の内容すべて</li>
             <li>共同学習会（月1回・90分・少人数）</li>
           </ul>
-          <div class="desc">メールレッスンに、共同学習会がつきます。月に一度集まって、自分の事業の柱を組み立てます。12ヶ月で何をやるかは、このすぐ下に全部書いています。</div>
+          <div class="desc">メールレッスンに、共同学習会がつきます。月に一度集まって、自分の事業の柱を組み立てます。12ヶ月で何をやるかは、<a href="#curriculum" style="color:var(--point);font-weight:700;text-decoration:none;">→ このあとに全部書いています</a></div>
           <div class="price">
             <div class="eur">€540</div>
           </div>
@@ -471,7 +527,7 @@
         </div>
       </div>
 
-      <div class="plan">
+      <div class="plan" id="plan-lounge">
         <div class="head">
           <span class="name">Leaders Lounge</span>
           <span class="tag">10月から新グループ</span>
@@ -485,7 +541,7 @@
             <li>Founders Table の内容すべて</li>
             <li>リーダーズラウンジ（月1回・グループコンサル）</li>
           </ul>
-          <div class="desc">3つのサービスが全部入ります。商品はある、お客さんもいる、でも一人で決め続けるのがしんどい。そういう方に。去年12月の回を最後にいったん止めていて、10月から新しいグループで再開します。</div>
+          <div class="desc">3つのサービスが全部入ります。商品はある、お客さんもいる、でも一人で決め続けるのがしんどい。そういう方に。去年12月の回を最後にいったん止めていて、10月から新しいグループで再開します。<a href="#lounge-detail" style="color:var(--point);font-weight:700;text-decoration:none;">→ グルコンの中身を見る</a></div>
           <div class="price">
             <div class="eur">€850</div>
           </div>
@@ -499,12 +555,30 @@
   </div>
 </section>
 
+<!-- ============ メールレッスンの中身 ============ -->
+<section class="alt" id="mail-detail">
+  <div class="wrap">
+    <div class="detail-divider"><span>▼ ここから、中身を詳しくご紹介します</span></div>
+    <div class="sec-eyebrow">メールレッスンの中身</div>
+    <h2 class="sec-title">365日、何が届くか</h2>
+    <p>3つの場所、全部の土台になっているサービスです。毎日届く1通の中身を、詳しくご紹介します。</p>
+
+    <div class="card">
+      <p style="margin-bottom:14px;"><b>毎日届くもの</b><br>テキストと、5〜10分のオーガニック専門家コースのショート動画が1本。通勤や家事のすきま時間で見られる長さです。</p>
+      <p style="margin-bottom:0;"><b>扱うテーマの一部</b><br>有機農業の原理／認証のしくみ／栄養素／疾病予防／遺伝子組み換え・ゲノム編集／環境／SDGs／エシカルな生産と消費／世界のオーガニック統計データ／学校給食ムーブメント　など</p>
+    </div>
+
+    <p>年に数回、期間を区切って「書いて出す」時間があります。その日のメールの問いへの自分の答えをBANDに投稿し、ほかの受講生の投稿も読める。ここが、読むだけで終わらせない仕組みです。</p>
+    <p>資格試験を受けたい方には、日々のメールに紐づくクイズが、そのまま対策になります。</p>
+  </div>
+</section>
+
 <!-- ============ 中身を全部見せる ============ -->
-<section class="alt">
+<section class="alt" id="curriculum">
   <div class="wrap">
     <div class="sec-eyebrow">共同学習会の中身</div>
     <h2 class="sec-title">12ヶ月、何をやるか全部書きます</h2>
-    <p>Founders Table と Leaders Lounge に入っている共同学習会は、月1回・90分・少人数。12ヶ月で12のテーマを回ります。</p>
+    <p>Founders Table と Leaders Lounge に入っている「共同学習会」の話です。自分の事業の柱を組み立てるための、月1回・90分・少人数のオンライン学習会で、12ヶ月で12のテーマを回ります。</p>
     <div class="callout" style="margin-bottom:24px;">これは新しいグループとして10月から始まります。途中から入るのではありません。全員が同じ月からのスタートです。</div>
 
     <div class="term">
@@ -572,6 +646,30 @@
     </div>
 
     <p>きれいにまとまってから持ってくる必要はありません。というより、<span class="hl">まとまらないから持ってくる場所</span>です。</p>
+  </div>
+</section>
+
+<!-- ============ リーダーズラウンジの中身 ============ -->
+<section id="lounge-detail">
+  <div class="wrap">
+    <div class="sec-eyebrow">リーダーズラウンジの中身</div>
+    <h2 class="sec-title">グルコンでは、こんなことをします</h2>
+    <p>Leaders Lounge に入っている「リーダーズラウンジ」、通称グルコンの話です。月1回・少人数のグループコンサルで、この3つを回します。</p>
+
+    <div class="step">
+      <div class="num">1</div>
+      <div class="body"><b>報告</b><span>前回、自分で決めたアクションがどうなったか話します。うまくいかなかった話も、そのまま持ってきてもらいます。</span></div>
+    </div>
+    <div class="step">
+      <div class="num">2</div>
+      <div class="body"><b>相談</b><span>値段のこと、原料のこと、伝え方のこと、売り先のこと。今つまずいていることを、その場で相談します。</span></div>
+    </div>
+    <div class="step">
+      <div class="num">3</div>
+      <div class="body"><b>宣言</b><span>次回までにやることを、その場で決めて、みんなの前で口に出します。次の回に、また報告します。</span></div>
+    </div>
+
+    <p style="margin-top:20px;">去年12月の回を最後にいったん止めていて、10月から新しいグループとして再開します。実際に参加した人が、この場をどう感じたか。このあとの声を読んでみてください。</p>
   </div>
 </section>
 
@@ -657,7 +755,7 @@
 
     <div class="faq">
       <div class="q"><span class="qm">Q</span><span>毎日メールを読む時間がありません。</span></div>
-      <div class="a">読むだけの日があっていいし、開かない日があってもかまいません。Daily Letters で大事なのは、期間を区切ったアウトプットのほうです。そこで自分のやったことを書いて出す。それだけで手が動きます。</div>
+      <div class="a">動画は1本5〜10分なので、すきま時間でも見られます。読むだけ、見るだけの日があっていいし、開かない日があってもかまいません。Daily Letters で大事なのは、期間を区切ったアウトプットのほうです。そこで自分のやったことを書いて出す。それだけで手が動きます。</div>
     </div>
 
     <div class="faq">
@@ -692,8 +790,23 @@
   <div class="wrap">
     <div class="sec-eyebrow">まずは、ここから</div>
     <h2 class="sec-title">いきなり申し込まなくて、大丈夫です</h2>
-    <p>まずは、公開しているクイズを1問だけ解いてみてください。今の自分がどのくらい説明できるか、5分でわかります。</p>
-    <p style="margin-top:16px;"><a href="https://iobschool.github.io/os-quiz/" target="_blank" rel="noopener" style="color:var(--point);font-weight:700;text-decoration:none;font-size:16px;">▶ オーガニック知識クイズを試してみる</a></p>
+    <p>申し込む前に試せるものを2つ用意しました。どちらも数分で終わります。気になったほうから、どうぞ。</p>
+
+    <div class="try-list">
+      <a class="try main" href="diagnosis.html">
+        <div class="tlabel">1分</div>
+        <div class="ttitle">どのプランが合うか、6つの質問で確かめる</div>
+        <div class="tdesc">いまの進み具合と、月にどれくらい時間を取れるかを聞きます。答え終わると、3つのうちどれが近いかが出ます。</div>
+        <div class="tgo">▶ プラン診断をやってみる</div>
+      </a>
+
+      <a class="try" href="https://iobschool.github.io/os-quiz/" target="_blank" rel="noopener">
+        <div class="tlabel">5分</div>
+        <div class="ttitle">オーガニック知識クイズを1問だけ解く</div>
+        <div class="tdesc">公開しているクイズです。今の自分がどのくらい説明できるか、その場でわかります。</div>
+        <div class="tgo">▶ クイズを試してみる</div>
+      </a>
+    </div>
   </div>
 </section>
 
