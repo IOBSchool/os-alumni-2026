@@ -129,11 +129,15 @@ function doGet(e)  { return handle(e); }
 function handle(e) {
   try {
     // POSTボディ・GETパラメータの両対応
+    // 🚨 e.parameter.payload を先に見ること。
+    // LP側は Content-Type: application/x-www-form-urlencoded で送るため、
+    // その場合 e.postData.contents は "payload=%7B...%7D" という生の文字列になり、
+    // 先に読むと JSON.parse が必ず失敗して申込が保存されない。
     var raw = "";
-    if (e && e.postData && e.postData.contents) {
-      raw = e.postData.contents;
-    } else if (e && e.parameter && e.parameter.payload) {
+    if (e && e.parameter && e.parameter.payload) {
       raw = e.parameter.payload;
+    } else if (e && e.postData && e.postData.contents) {
+      raw = e.postData.contents;
     }
     if (!raw) {
       return ContentService.createTextOutput(JSON.stringify({ result: "no-data" }))
