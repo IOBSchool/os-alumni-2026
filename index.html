@@ -278,6 +278,14 @@
   #thanks{display:none;text-align:center;padding:30px 10px;}
   #thanks .mincho{font-size:20px;color:var(--point);margin-bottom:14px;}
 
+  #fallback{display:none;text-align:center;padding:30px 10px;}
+  #fallback .mincho{font-family:"Zen Old Mincho",serif;font-size:19px;color:var(--point);margin-bottom:14px;}
+  .fallback-btn{
+    display:block;background:var(--point);color:#fff;text-decoration:none;
+    padding:16px;border-radius:12px;font-size:16px;font-weight:700;
+    font-family:"Zen Old Mincho",serif;margin:20px auto;max-width:320px;
+  }
+
   .closing{
     position:relative;text-align:center;padding:70px 20px;
     background-image:url("img/tour-hall.jpg");background-size:cover;background-position:center 38%;
@@ -800,7 +808,7 @@
         <div class="tgo">▶ プラン診断をやってみる</div>
       </a>
 
-      <a class="try" href="https://iobschool.github.io/os-quiz/" target="_blank" rel="noopener">
+      <a class="try" href="https://iobschool.github.io/os-quiz/general/" target="_blank" rel="noopener">
         <div class="tlabel">5分</div>
         <div class="ttitle">オーガニック知識クイズを1問だけ解く</div>
         <div class="tdesc">公開しているクイズです。今の自分がどのくらい説明できるか、その場でわかります。</div>
@@ -881,6 +889,15 @@
       お支払いのご案内が記載されていますので、<br>ご確認をお願いいたします。<br><br>
       10月に、一緒に始めましょう。</p>
     </div>
+
+    <div id="fallback">
+      <div class="mincho">恐れ入ります。あと一手間だけお願いします。</div>
+      <p>ただいまフォームの自動送信が使えない状態です。<br>
+      下のボタンを押すと、入力いただいた内容が入ったメールが開きます。<br>
+      そのまま送信していただければ、確実にお申し込みを受け付けます。</p>
+      <a id="fallbackMail" class="fallback-btn" href="#">メールでお申し込みを送る</a>
+      <p style="font-size:13px;">うまく開かない場合は、<br>お手数ですが <b>school@iob.bio</b> 宛に<br>お名前とご希望のプランをお送りください。</p>
+    </div>
   </div>
 </section>
 
@@ -889,7 +906,7 @@
     <p class="mincho">一人だと、続かない。<br>だから、仲間と続ける場所をつくりました。<br><br>10月に、一緒に始めましょう。</p>
     <div class="actions">
       <a class="primary" href="#applyForm">申し込みフォームへ</a>
-      <a href="https://iobschool.github.io/os-quiz/" target="_blank" rel="noopener">まずはクイズを1問だけ</a>
+      <a href="https://iobschool.github.io/os-quiz/general/" target="_blank" rel="noopener">まずはクイズを1問だけ</a>
     </div>
   </div>
 </div>
@@ -934,6 +951,34 @@
       message: form.message.value
     };
 
+    // ── 保険：GAS_URLが未設定のときは「送信できたフリ」をせず、メール申込に切り替える ──
+    // no-cors のfetchはサーバーが404/405を返しても成功扱いになるため、
+    // URLが入っていない状態で完了画面を出すと申込が誰にも届かないまま消える。
+    function showFallback(){
+      var lines = [
+        "お名前：" + data.name,
+        "メールアドレス：" + data.email,
+        "ご希望のプラン：" + data.plan,
+        "ご希望の決済方法：" + data.payment,
+        "お支払い回数：" + data.installment,
+        "モニター表記のご希望：" + data.monitorName,
+        "ご質問・ご連絡事項：" + (data.message || "（なし）")
+      ].join("\n");
+      document.getElementById('fallbackMail').href =
+        "mailto:school@iob.bio"
+        + "?subject=" + encodeURIComponent("お申し込み（" + data.plan + "）" + data.name)
+        + "&body=" + encodeURIComponent("お申し込みします。\n\n" + lines + "\n");
+      form.style.display = "none";
+      var fb = document.getElementById('fallback');
+      fb.style.display = "block";
+      window.scrollTo({top: fb.offsetTop - 40, behavior:"smooth"});
+    }
+
+    if (!GAS_URL || GAS_URL.indexOf("PASTE_") === 0 || GAS_URL.indexOf("http") !== 0) {
+      showFallback();
+      return;
+    }
+
     // GASは exec → googleusercontent へ302リダイレクトされ、POSTがGETに変換されることがある。
     // そのため payload をURLエンコードで送り、GAS側は doPost / doGet の両方で受ける。
     fetch(GAS_URL, {
@@ -946,9 +991,7 @@
       document.getElementById('thanks').style.display="block";
       window.scrollTo({top:document.getElementById('thanks').offsetTop-40, behavior:"smooth"});
     }).catch(function(){
-      btn.disabled=false;
-      btn.textContent="この内容で申し込む";
-      alert("送信に失敗しました。お手数ですが、もう一度お試しください。");
+      showFallback();
     });
   });
 </script>
