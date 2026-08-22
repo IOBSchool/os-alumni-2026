@@ -930,8 +930,10 @@
     }
   })();
 
-  // ▼▼▼ GASをデプロイしたあと、ここにWebアプリのURLを貼り付けてください ▼▼▼
-  const GAS_URL = "PASTE_GAS_WEBAPP_URL_HERE";
+  // 申込先GAS（スプレッドシート「8月既存生販売_申込管理」に紐づくウェブアプリ）
+  // 🚨コードを直したら「デプロイを管理 → 編集 → バージョン：新バージョン」で再デプロイすること。
+  //   新バージョンを選ばないと、直したはずのコードが本番に反映されない。
+  const GAS_URL = "https://script.google.com/macros/s/AKfycbzebRdA-kdzFIXAmkNGMDx-Hp20vm1jvcTn2J2KwFd-mrbvoRmf8Bxm6-NI8ZOM1hY0oA/exec";
 
   const form = document.getElementById('applyForm');
   const btn = document.getElementById('submitBtn');
