@@ -730,7 +730,7 @@
     <p class="callout" style="margin-top:18px;">Stripe・PayPalの決済リンクは、お申し込みフォーム送信後の自動返信メールでご案内します。</p>
 
     <div class="deadline">
-      <div class="d">受付は 2026年9月2日（水）23:59 まで</div>
+      <div class="d">受付は 2026年9月6日（日）23:59 まで</div>
       <div class="s" id="deadlineNote">日本時間。定員は設けていません</div>
     </div>
   </div>
@@ -788,7 +788,7 @@
 
     <div class="faq">
       <div class="q"><span class="qm">Q</span><span>締切はいつですか?</span></div>
-      <div class="a">モニター価格でのお申し込みは、2026年9月2日（水）23:59（日本時間）までです。定員は設けていません。</div>
+      <div class="a">モニター価格でのお申し込みは、2026年9月6日（日）23:59（日本時間）までです。定員は設けていません。</div>
     </div>
   </div>
 </section>
@@ -921,9 +921,10 @@
 </footer>
 
 <script>
-  // ── 受付期限：2026年9月2日23:59（JST）いっぱいでモニター価格の案内を終了 ──
+  // ── 受付期限：2026年9月6日(日)23:59（JST）いっぱいでモニター価格の案内を終了 ──
+  //    🚨締切を動かすときは、ここ・FV下の受付表示・FAQの3ヶ所を必ず揃えること ──
   (function(){
-    var deadline = Date.UTC(2026, 8, 2, 15, 0, 0); // 2026-09-03 00:00 JST
+    var deadline = Date.UTC(2026, 8, 6, 15, 0, 0); // 2026-09-07 00:00 JST（＝9/6 23:59 JSTいっぱい）
     if (Date.now() >= deadline) {
       var note = document.getElementById('deadlineNote');
       if (note) note.textContent = "モニター価格でのご案内期間は終了しました。お問い合わせは school@iob.bio まで。";
