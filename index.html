@@ -173,6 +173,33 @@
   .plan .price .eur{font-family:"Zen Old Mincho",serif;font-weight:900;font-size:30px;color:var(--point);}
   .plan .start{text-align:center;font-size:12px;color:var(--second);margin-top:8px;font-weight:700;}
 
+  /* 一人で抱えないループ */
+  .loop-chain{margin:22px 0 8px;display:flex;flex-direction:column;align-items:center;}
+  .loop-item{background:var(--white);border:1px solid var(--line);border-radius:999px;
+    padding:10px 22px;font-size:14.5px;font-weight:700;color:var(--ink);text-align:center;}
+  .loop-item.last{background:var(--point);color:#fff;border-color:var(--point);}
+  .loop-arrow{color:var(--point);font-size:15px;line-height:1;padding:5px 0;font-weight:700;}
+
+  /* あなたは今どこにいますか（A/B/C選択） */
+  .choice{background:var(--white);border:1px solid var(--line);border-radius:14px;padding:20px 20px 18px;margin-bottom:14px;}
+  .choice .letter{
+    display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;border-radius:50%;
+    background:var(--ink);color:#fff;font-family:"Zen Old Mincho",serif;font-weight:700;font-size:14px;margin-bottom:10px;
+  }
+  .choice .voice{font-size:15.5px;line-height:1.85;}
+  .choice .arrow-down{text-align:center;color:var(--sub);font-size:13px;margin:10px 0;}
+  .choice .goto{text-align:center;font-family:"Zen Old Mincho",serif;font-weight:700;font-size:16.5px;color:var(--point);
+    background:#fbeee6;border-radius:10px;padding:10px;}
+
+  /* プランカード内の小要素 */
+  .letterchip{
+    display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;border-radius:50%;
+    background:var(--point);color:#fff;font-family:"Zen Old Mincho",serif;font-weight:700;font-size:12px;margin-right:8px;flex:none;
+  }
+  .plan .envline{font-size:13.5px;color:var(--second);font-weight:700;margin-bottom:12px;}
+  .plan .targetline{background:var(--bg);border-radius:10px;padding:12px 14px;font-size:13.5px;line-height:1.8;color:var(--ink);margin-bottom:16px;}
+  .plan .targetline .lbl{font-size:11.5px;color:var(--sub);font-weight:700;margin-bottom:4px;}
+
   /* カリキュラム */
   .term{margin-bottom:26px;}
   .term-head{font-family:"Zen Old Mincho",serif;font-weight:700;font-size:15px;color:var(--point);
@@ -317,6 +344,39 @@
   <div class="hero-cap">2026年 独ビオホテル・タナホフツアーにて受講生と</div>
 </header>
 
+<!-- ============ あなたは今どこにいますか（A/B/C選択） ============ -->
+<section id="choose">
+  <div class="wrap">
+    <div class="sec-eyebrow">まず、ひとつだけ</div>
+    <h2 class="sec-title">あなたは、今どこで止まっていますか？</h2>
+    <p>3つのプランは、情報量の違いでも、特典の足し算でもありません。今、自分に何が必要かで選ぶものです。近いものを、ひとつ選んでみてください。</p>
+
+    <div class="choice">
+      <div class="letter">A</div>
+      <div class="voice">「やりたいことはある。まず、自分で一歩を踏み出したい」</div>
+      <div class="arrow-down">↓</div>
+      <div class="goto">Daily Letters（€280）</div>
+    </div>
+
+    <div class="choice">
+      <div class="letter">B</div>
+      <div class="voice">「考えていることはある。でも、一人で考えるだけでは前に進まない」</div>
+      <div class="arrow-down">↓</div>
+      <div class="goto">Founders Table（€540）</div>
+    </div>
+
+    <div class="choice">
+      <div class="letter">C</div>
+      <div class="voice">「やることは分かっている。でも、経営に関わるこの判断だけは、一人で決めずに経験ある経営者と考えたい」</div>
+      <div class="arrow-down">↓</div>
+      <div class="goto">Leaders Lounge（€850）</div>
+    </div>
+
+    <p style="margin-top:20px;">だから、それぞれに必要な環境の濃さが違います。上下の関係ではありません。今の自分に必要な環境を、選んでください。</p>
+    <p style="margin-top:20px;">近いものを選んだら、そのまま少しだけ読み進めてください。なぜ「一人だと止まるのか」、なぜこの3つが必要なのか、順番にお話しします。</p>
+  </div>
+</section>
+
 <section>
   <div class="wrap">
     <div class="sec-eyebrow">はじめに</div>
@@ -392,6 +452,30 @@
     <p>反対に、<span class="hl">横に誰かいるだけで、拍子抜けするくらい進みます</span>。次の1ヶ月にやることを人の前で言うと、動きます。うまくいかなかった話を聞いてくれる人がいると、もう一度試せます。</p>
     <p><span class="hl">足りていなかったのは情報じゃなくて、環境のほうでした。</span></p>
 
+    <p>仲間がいると、実際に何が起きるのか。去年からずっと見てきました。</p>
+
+    <div class="loop-chain">
+      <div class="loop-item">一人で抱える</div>
+      <div class="loop-arrow">↓</div>
+      <div class="loop-item">仲間に話す</div>
+      <div class="loop-arrow">↓</div>
+      <div class="loop-item">言葉になる</div>
+      <div class="loop-arrow">↓</div>
+      <div class="loop-item">次の一手が決まる</div>
+      <div class="loop-arrow">↓</div>
+      <div class="loop-item">動く</div>
+      <div class="loop-arrow">↓</div>
+      <div class="loop-item">結果を持ち帰る</div>
+      <div class="loop-arrow">↓</div>
+      <div class="loop-item last">また挑戦する</div>
+    </div>
+
+    <div class="quote-big">
+      <div class="t">一人で抱えないことで、<br>挑戦が止まらなくなる。</div>
+    </div>
+
+    <p>去年のリーダーズラウンジと、今年の共同学習会。どちらも、実際にこの流れが起きてきた場所です。このあと、その場にいた人の話をします。</p>
+
     <div class="photo">
       <img src="img/tour-hall.jpg" alt="ビオホテル・タナホフツアーに参加したみなさん" loading="lazy">
       <div class="cap">2026年のビオホテル・タナホフツアー。ドイツまで来てくれた受講生のみなさんと。こういう時間があると、帰ったあとの一歩が変わります。</div>
@@ -441,7 +525,8 @@
       <p>メールレッスン、共同学習会、リーダーズラウンジという名のグルコン。この3つを、挑戦を続けるためのひとつの環境として組み直しました。<span class="hl">メールレッスンだけでも始められて、共同学習会、リーダーズラウンジと、必要な分だけ足していけます</span>。全員が10月に、新しいグループで一緒にスタートします。</p>
     </div>
 
-    <p><span class="hl">今回は、モニター価格で募集します。</span>定員はありませんが、少人数になると思います。モニターの条件は、アンケートと取材へのご協力だけです。</p>
+    <p>10月から、全員が同じタイミングで集まり、同じ環境の中で12ヶ月を始めます。一人ずつバラバラに始めるのではなく、最初から一緒に始める。だから、今回の受付は締切を区切っています。</p>
+    <p><span class="hl">今回は、モニター価格で募集します。</span>この新しい環境を一緒につくってくださる方への価格です。完成されたサービスを買っていただくというより、アンケートと取材にご協力いただきながら、一緒に育てていただく募集です。定員は設けていません。</p>
   </div>
 </section>
 
@@ -455,11 +540,11 @@
 
     <div class="step">
       <div class="num">1</div>
-      <div class="body"><b>365日メールレッスン｜毎日1通で、手を動かす習慣をつくる</b><span>毎日、レムケなつこからメールが1通届きます。テキストと、5〜10分のオーガニック専門家コースのショート動画がセットになっていて、通勤のすきま時間に見るだけでも学びが積み重なっていきます。読むだけ、見るだけの日があってもかまいません。決められた期間だけ、その日のメールの問いへの自分の答えをBANDに書いて、仲間の分も読む。これだけで手が動き出します。</span></div>
+      <div class="body"><b>365日メールレッスン｜毎日1通で、手を動かす習慣をつくる</b><span>「今日は何をやればいい？」を、毎朝自分で考えなくてよくなります。毎日届く1通に、その日の問いがあります。テキストと5〜10分のショート動画で問いに触れて、決められた期間だけ、その日の答えをBANDに書いて出す。仲間の分も読める。「いつかやろう」と思っていたことを、今日5分だけ進める。その小さな積み重ねを365日続けるための仕組みです。</span></div>
     </div>
     <div class="step">
       <div class="num">2</div>
-      <div class="body"><b>共同学習会｜月1回、仲間と事業の柱を組み立てる</b><span>月1回・90分・少人数のオンライン学習会です。何を、誰に、いくらで。一人だと決まらないことが、この場だと決まります。近況を話すチェックインから始まり、3ステップのワーク、書いたものをシェアする時間まで、90分の中に手を動かす工程が全部入っています。10月から12ヶ月かけて「繋がる」「絞る」「掘る」といったテーマを順番に進み、9月には最終発表会もあります。</span></div>
+      <div class="body"><b>共同学習会｜月1回、仲間と事業の柱を組み立てる</b><span>一人では決められなかった「何を、誰に、いくらで」を、月にひとつずつ決めていく場所です。近況を話すチェックインから始まり、3ステップのワーク、書いたものをシェアする時間まで、90分の中に手を動かす工程が全部入っています。10月から12ヶ月かけて「繋がる」「絞る」「掘る」といったテーマを順番に進み、9月の最終発表会では、今は「まだ考え中」のことを、人前で自分の事業として話せるところまで持っていきます。</span></div>
     </div>
     <div class="step">
       <div class="num">3</div>
@@ -474,41 +559,26 @@
   <div class="wrap">
     <div class="sec-eyebrow">ご案内</div>
     <h2 class="sec-title">3つの場所から、選べます</h2>
-    <p>オーガニック専門家コースの続きに、3つの場所を用意しました。今、欲しいものに合わせて選んでください。</p>
-
-    <div class="tier-diagram">
-      <div class="tier t1">
-        <div class="tname">Daily Letters　€280</div>
-        <div class="tfor">まず自分のペースで始めたい人に</div>
-      </div>
-      <div class="tier-add">共同学習会（月1回・事業の柱を組む）</div>
-      <div class="tier t2">
-        <div class="tname">Founders Table　€540</div>
-        <div class="tfor">「何を、誰に、いくらで」を決めたい人に</div>
-      </div>
-      <div class="tier-add">リーダーズラウンジ（月1回・ビジネスの相談）</div>
-      <div class="tier t3">
-        <div class="tname">Leaders Lounge　€850</div>
-        <div class="tfor">相談できる相手がほしい人に</div>
-      </div>
-    </div>
-    <p style="font-size:12.5px;color:var(--sub);text-align:center;margin-top:-14px;margin-bottom:22px;">下のプランほど、上のプランの内容をすべて含みます</p>
+    <p>冒頭で選んだA・B・Cが、そのままこの3つです。上下の関係ではありません。今の自分に必要な環境を、選んでください。</p>
+    <p>オーガニック専門家コースの続きに、3つの場所を用意しました。</p>
 
     <div class="plans">
 
       <div class="plan rec" id="plan-daily">
         <div class="head">
-          <span class="name">Daily Letters</span>
+          <span class="name"><span class="letterchip">A</span>Daily Letters</span>
           <span class="tag">迷ったらここから</span>
         </div>
         <div class="body">
-          <div class="forwho">まず自分のペースで始めたい人に</div>
+          <div class="forwho">「やりたいことはある。まず、自分で一歩を踏み出したい」人に</div>
+          <div class="envline">一人でも、挑戦を続けられる環境（自走）</div>
           <ul>
             <li><b>メールレッスン365日</b>｜有機農業の原理から、認証、栄養素、環境、SDGsまで。1日ひとつ、知識が積み上がります（認定資格対策クイズ付き）</li>
             <li><b>決められた期間だけ、書いて出す</b>｜その日のメールの問いへの自分の答えをBANDに投稿します。ほかの受講生の投稿も読めるので、一人で読むだけで終わりません</li>
             <li><b>共同学習会に年1〜2回ご招待</b>｜メールの向こうにいる仲間と、実際に顔を合わせる機会があります（<a href="#curriculum" style="color:var(--point);font-weight:700;text-decoration:none;">→ 共同学習会の中身を見る</a>）</li>
           </ul>
-          <div class="desc">毎日ひとつ知識を積み上げながら、期間を区切ったアウトプットで「書いて出す」感覚に慣れていく場所です。まずはここから始めて、物足りなくなったら他のプランに移れます。</div>
+          <div class="targetline"><div class="lbl">この30日間で目指す状態</div>事業でやってみたいことを1つ決め、そのための最初の一歩を実際に始めている。</div>
+          <div class="desc">毎日ひとつ知識を積み上げながら、期間を区切ったアウトプットで「書いて出す」感覚に慣れていく場所です。</div>
           <div class="price">
             <div class="eur">€280</div>
           </div>
@@ -518,16 +588,18 @@
 
       <div class="plan" id="plan-founders">
         <div class="head">
-          <span class="name">Founders Table</span>
+          <span class="name"><span class="letterchip">B</span>Founders Table</span>
           <span class="tag">10月から新グループ</span>
         </div>
         <div class="body">
-          <div class="forwho">「何を、誰に、いくらで」が決まらないまま止まっている人に</div>
+          <div class="forwho">「考えていることはある。でも、一人で考えるだけでは前に進まない」人に</div>
+          <div class="envline">仲間と一緒に挑戦し、フィードバックを受けながら前に進む環境（共創）</div>
           <ul>
             <li>Daily Letters の内容すべて</li>
             <li>共同学習会（月1回・90分・少人数）</li>
           </ul>
-          <div class="desc">メールレッスンに、共同学習会がつきます。月に一度集まって、自分の事業の柱を組み立てます。12ヶ月で何をやるかは、<a href="#curriculum" style="color:var(--point);font-weight:700;text-decoration:none;">→ このあとに全部書いています</a></div>
+          <div class="targetline"><div class="lbl">この30日間で目指す状態</div>一人で抱えていた事業の課題を仲間との対話で整理し、次に何をするかを具体的に決めている。</div>
+          <div class="desc">月に一度集まって、自分の事業の柱を組み立てます。12ヶ月で何をやるかは、<a href="#curriculum" style="color:var(--point);font-weight:700;text-decoration:none;">→ このあとに全部書いています</a></div>
           <div class="price">
             <div class="eur">€540</div>
           </div>
@@ -537,19 +609,21 @@
 
       <div class="plan" id="plan-lounge">
         <div class="head">
-          <span class="name">Leaders Lounge</span>
+          <span class="name"><span class="letterchip">C</span>Leaders Lounge</span>
           <span class="tag">10月から新グループ</span>
         </div>
         <div class="planimg">
           <img src="img/tour-lounge.jpg" alt="ビオホテルのラウンジに集まったみなさん" loading="lazy">
         </div>
         <div class="body">
-          <div class="forwho">すでに動いていて、相談できる相手がほしい人に</div>
+          <div class="forwho">「やることは分かっている。でも、経営に関わるこの判断だけは、一人で決めずに経験ある経営者と考えたい」人に</div>
+          <div class="envline">経営者同士で、より大きな意思決定と挑戦を進める環境（意思決定）</div>
           <ul>
             <li>Founders Table の内容すべて</li>
             <li>リーダーズラウンジ（月1回・グループコンサル）</li>
           </ul>
-          <div class="desc">3つのサービスが全部入ります。商品はある、お客さんもいる、でも一人で決め続けるのがしんどい。そういう方に。去年12月の回を最後にいったん止めていて、10月から新しいグループで再開します。<a href="#lounge-detail" style="color:var(--point);font-weight:700;text-decoration:none;">→ グルコンの中身を見る</a></div>
+          <div class="targetline"><div class="lbl">この30日間で目指す状態</div>一人では決めきれなかった重要な経営判断について、経験ある経営者との対話を通じて判断を整理し、次に何をするかを決めている。</div>
+          <div class="desc">去年12月の回を最後にいったん止めていて、10月から新しいグループで再開します。<a href="#lounge-detail" style="color:var(--point);font-weight:700;text-decoration:none;">→ グルコンの中身を見る</a></div>
           <div class="price">
             <div class="eur">€850</div>
           </div>
@@ -559,7 +633,7 @@
 
     </div>
 
-    <p style="font-size:13px;color:var(--sub);margin-top:16px;">お支払いはユーロ建てです。</p>
+    <p style="font-size:13px;color:var(--sub);margin-top:16px;text-align:center;">迷ったら、Daily Lettersから。あとから上のプランに移ることもできます。お支払いはユーロ建てです。</p>
   </div>
 </section>
 
@@ -670,7 +744,7 @@
     </div>
     <div class="step">
       <div class="num">2</div>
-      <div class="body"><b>相談</b><span>値段のこと、原料のこと、伝え方のこと、売り先のこと。今つまずいていることを、その場で相談します。</span></div>
+      <div class="body"><b>相談</b><span>持ち込むのは、経営者としての意思決定につながる相談です。事業の集中と撤退、価格戦略、新規事業、採用・組織、経営者自身の時間配分。一人で考えると何日もかかることを、その場で相談します。</span></div>
     </div>
     <div class="step">
       <div class="num">3</div>
@@ -730,7 +804,7 @@
     <p class="callout" style="margin-top:18px;">Stripe・PayPalの決済リンクは、お申し込みフォーム送信後の自動返信メールでご案内します。</p>
 
     <div class="deadline">
-      <div class="d">受付は 2026年9月6日（日）23:59 まで</div>
+      <div class="d">受付は 2026年9月9日（水）23:59 まで</div>
       <div class="s" id="deadlineNote">日本時間。定員は設けていません</div>
     </div>
   </div>
@@ -783,12 +857,12 @@
 
     <div class="faq">
       <div class="q"><span class="qm">Q</span><span>途中でやめた場合、返金はありますか?</span></div>
-      <div class="a">返金は行っていません。この点だけ、申し込む前にお伝えしておきます。</div>
+      <div class="a">お申し込み後の返金は行っていません。だからこそ、今の自分に合うプランかどうかは、申し込む前に確かめてほしいです。迷ったら、この下にある「どのプランが合うか、6つの質問で確かめる」も使ってみてください。</div>
     </div>
 
     <div class="faq">
       <div class="q"><span class="qm">Q</span><span>締切はいつですか?</span></div>
-      <div class="a">モニター価格でのお申し込みは、2026年9月6日（日）23:59（日本時間）までです。定員は設けていません。</div>
+      <div class="a">モニター価格でのお申し込みは、2026年9月9日（水）23:59（日本時間）までです。定員は設けていません。</div>
     </div>
   </div>
 </section>
@@ -903,10 +977,10 @@
 
 <div class="closing">
   <div class="wrap">
-    <p class="mincho">一人だと、続かない。<br>だから、仲間と続ける場所をつくりました。<br><br>10月に、一緒に始めましょう。</p>
+    <p class="mincho">一人だと、また止まってしまう。<br>だから、今度は一人でやらなくていい環境をつくりました。<br>10月から、一緒に始めましょう。<br><br>あなたは、今どこで止まっていますか？</p>
     <div class="actions">
       <a class="primary" href="#applyForm">申し込みフォームへ</a>
-      <a href="https://iobschool.github.io/os-quiz/general/" target="_blank" rel="noopener">まずはクイズを1問だけ</a>
+      <a href="diagnosis.html">まずは1分のプラン診断から</a>
     </div>
   </div>
 </div>
@@ -921,10 +995,10 @@
 </footer>
 
 <script>
-  // ── 受付期限：2026年9月6日(日)23:59（JST）いっぱいでモニター価格の案内を終了 ──
+  // ── 受付期限：2026年9月9日(水)23:59（JST）いっぱいでモニター価格の案内を終了 ──
   //    🚨締切を動かすときは、ここ・FV下の受付表示・FAQの3ヶ所を必ず揃えること ──
   (function(){
-    var deadline = Date.UTC(2026, 8, 6, 15, 0, 0); // 2026-09-07 00:00 JST（＝9/6 23:59 JSTいっぱい）
+    var deadline = Date.UTC(2026, 8, 9, 15, 0, 0); // 2026-09-10 00:00 JST（＝9/9 23:59 JSTいっぱい）
     if (Date.now() >= deadline) {
       var note = document.getElementById('deadlineNote');
       if (note) note.textContent = "モニター価格でのご案内期間は終了しました。お問い合わせは school@iob.bio まで。";
