@@ -147,14 +147,58 @@ function handle(e) {
     }
 
     const d = JSON.parse(raw);
-    const sheet = SpreadsheetApp.getActiveSpreadsheet().getSheets()[0];
+    const ss = SpreadsheetApp.getActiveSpreadsheet();
+
+    // ── 無料お試し会の先行エントリーは、申込とは別のシートに入れる ──
+    // 申込フォームと同じGAS URLを共有しているので、ここで振り分ける。
+    if (d.type === "説明会・先行エントリー") {
+      var semSheet = ss.getSheetByName("説明会エントリー");
+      if (!semSheet) {
+        semSheet = ss.insertSheet("説明会エントリー");
+        semSheet.appendRow(["受付日時", "お名前", "メールアドレス", "出やすい時間帯", "日程案内済み"]);
+      }
+      var semTs = Utilities.formatDate(new Date(), "Asia/Tokyo", "yyyy/MM/dd HH:mm:ss");
+      semSheet.appendRow([semTs, d.name, d.email, d.slot, ""]);
+
+      if (CONFIG.NOTIFY_TO) {
+        try {
+          MailApp.sendEmail({
+            to: CONFIG.NOTIFY_TO,
+            subject: "【お試し会エントリー】" + d.name + " 様",
+            body: "お試し会の先行エントリーが入りました。\n\n"
+              + "お名前：" + d.name + "\n"
+              + "メール：" + d.email + "\n"
+              + "出やすい時間帯：" + d.slot + "\n"
+          });
+        } catch (err) {}
+      }
+      try {
+        MailApp.sendEmail({
+          to: d.email,
+          subject: "【受付】お試し会の先行エントリーをお受けしました",
+          body: d.name + " 様\n\n"
+            + "お試し会の先行エントリーをお受けしました。\n"
+            + "日程が決まり次第、いちばんにご案内します。\n\n"
+            + "ご希望の時間帯：" + d.slot + "\n\n"
+            + "当日お会いできるのを楽しみにしています。\n\n"
+            + "レムケなつこ\n"
+            + "Institut für Organic Business GmbH\n"
+            + "school@iob.bio\n"
+        });
+      } catch (err) {}
+
+      return ContentService.createTextOutput(JSON.stringify({ result: "ok", kind: "seminar" }))
+        .setMimeType(ContentService.MimeType.JSON);
+    }
+
+    const sheet = ss.getSheets()[0];
 
     if (sheet.getLastRow() === 0) {
-      sheet.appendRow(["申込日時", "お名前", "メールアドレス", "プラン", "希望決済方法", "お支払い回数", "モニター表記希望", "ご質問・連絡事項", "通知結果", "返信結果"]);
+      sheet.appendRow(["申込日時", "お名前", "メールアドレス", "プラン", "希望決済方法", "お支払い回数", "モニター表記希望", "ご紹介者", "ご質問・連絡事項", "通知結果", "返信結果"]);
     }
 
     const ts = Utilities.formatDate(new Date(), "Asia/Tokyo", "yyyy/MM/dd HH:mm:ss");
-    sheet.appendRow([ts, d.name, d.email, d.plan, d.payment, d.installment, d.monitorName, d.message]);
+    sheet.appendRow([ts, d.name, d.email, d.plan, d.payment, d.installment, d.monitorName, d.referrer || "", d.message]);
     const lastRow = sheet.getLastRow();
 
     var notifyStatus = "";
@@ -180,7 +224,7 @@ function handle(e) {
       } catch (e2) {
         notifyStatus = "通知ERR: " + e2;
       }
-      sheet.getRange(lastRow, 9).setValue(notifyStatus);
+      sheet.getRange(lastRow, 10).setValue(notifyStatus);
     }
 
     // ── 申込者への自動返信 ──
@@ -228,7 +272,7 @@ function handle(e) {
       } catch (e4) {
         replyStatus = "返信ERR: " + e4;
       }
-      sheet.getRange(lastRow, 10).setValue(replyStatus);
+      sheet.getRange(lastRow, 11).setValue(replyStatus);
     }
 
     return ContentService.createTextOutput(JSON.stringify({ result: "ok" }))
