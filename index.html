@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noindex, nofollow">
-<title>挑戦を続けるための3つの場所｜Institut für Organic Business</title>
+<title>挑戦を続けるための4つの場所｜Institut für Organic Business</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@500;700;900&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
@@ -516,6 +516,188 @@
   .mail .todo{background:#fbeee6;border-radius:10px;padding:14px 15px;font-size:14px;line-height:1.85;margin-top:16px;}
   .mail .todo .lbl{font-size:11.5px;font-weight:700;color:var(--point);letter-spacing:.04em;margin-bottom:5px;}
   .mail .sig{font-size:13.5px;color:var(--sub);margin-top:18px;}
+
+  /* ===== FV（YCS構造 × Creator Collegeデザイン） ===== */
+  .fv{background:var(--bg);padding:34px 0 0;}
+  .fv .pill{
+    display:inline-block;border:1px solid var(--ink);border-radius:999px;
+    padding:5px 14px;font-size:11.5px;font-weight:700;letter-spacing:.06em;
+    color:var(--ink);margin-bottom:22px;
+  }
+  .fv .naze{font-family:"Zen Old Mincho",serif;font-size:21px;font-weight:700;
+    color:var(--ink);margin-bottom:12px;letter-spacing:.02em;}
+  .fv .quits{display:flex;gap:9px;margin-bottom:12px;}
+  .fv .quit{
+    flex:1;background:#fff;border:1.5px solid var(--ink);border-radius:6px;
+    padding:13px 8px;text-align:center;
+    font-family:"Zen Old Mincho",serif;font-weight:700;font-size:15px;
+    color:var(--ink);line-height:1.5;
+  }
+  .fv .yameta{font-family:"Zen Old Mincho",serif;font-size:19px;font-weight:700;
+    color:var(--ink);margin-bottom:20px;}
+  .fv h1{
+    font-family:"Zen Old Mincho",serif;font-weight:900;
+    font-size:33px;line-height:1.5;letter-spacing:.01em;
+    color:var(--ink);margin-bottom:14px;
+  }
+  .fv h1 em{font-style:normal;color:var(--point);}
+  .fv .escape{font-size:14.5px;color:var(--sub);line-height:1.8;margin-bottom:26px;}
+  .fv .auth{
+    font-size:12.5px;color:var(--sub);letter-spacing:.02em;
+    padding:9px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+    margin-bottom:22px;
+  }
+  .fv .pname{
+    font-family:"Zen Old Mincho",serif;font-weight:700;font-size:22px;
+    color:var(--ink);line-height:1.6;margin-bottom:10px;
+  }
+  .fv .form-pill{
+    display:inline-block;background:var(--ink);color:#fff;border-radius:999px;
+    padding:5px 14px;font-size:11.5px;font-weight:700;letter-spacing:.05em;margin-bottom:22px;
+  }
+  .fv .shots{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin-bottom:20px;}
+  .fv .shots img{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:6px;display:block;}
+  .fv .fvbtn{margin-bottom:10px;}
+  .fv .sub-note{font-size:12.5px;color:var(--sub);line-height:1.8;text-align:center;margin-bottom:26px;}
+  .fv .fvlogo{display:block;margin:0 auto 30px;width:150px;height:auto;opacity:.85;}
+  .fv h1{text-wrap:balance;}
+  @media(max-width:480px){
+    .fv h1{font-size:25px;}
+    .fv .quit{font-size:13.5px;padding:11px 5px;}
+    .fv .naze{font-size:19px;}
+    .fv .yameta{font-size:17px;}
+    .fv .pname{font-size:20px;}
+  }
+
+  /* ============================================================
+     デザイン一掃（Creator Collegeモデリング）
+     ・色は3つだけ：生成り / 濃い茶 / オレンジ（アクセント最小）
+     ・枠線・帯・ベタ塗り・蛍光マーカーを外し、余白と書体で格を出す
+     ・「講座の教材」に見える要素を全部落とす
+     ============================================================ */
+
+  body{line-height:2.05;letter-spacing:.01em;}
+  p{margin-bottom:22px;}
+
+  /* 交互の背景をやめて、1枚の紙にする */
+  section{padding:70px 0;}
+  section.alt{background:transparent;}
+  @media(max-width:480px){ section{padding:52px 0;} }
+
+  /* 見出し：オレンジの帯を外し、大きさだけで格を出す */
+  .sec-title{
+    font-size:28px;font-weight:700;line-height:1.55;
+    padding-left:0;border-left:none;margin-bottom:26px;letter-spacing:.005em;
+  }
+  @media(max-width:480px){ .sec-title{font-size:24px;} }
+  .sec-eyebrow{
+    font-size:10.5px;font-weight:700;letter-spacing:.18em;
+    color:var(--sub);margin-bottom:12px;
+  }
+
+  /* 蛍光マーカーをやめる（教材に見える最大の原因） */
+  .hl{background:none;font-weight:700;color:var(--ink);
+    border-bottom:2px solid rgba(242,107,59,.45);padding:0;}
+
+  /* 枠を外して余白で見せる */
+  .card{background:transparent;border:none;border-radius:0;padding:0;margin-bottom:0;}
+  .check-list li{border-bottom:none;padding:9px 0 9px 26px;font-size:16px;}
+  .check-list li::before{content:"—";color:var(--point);font-size:15px;top:9px;}
+
+  /* 「一人だから」のブロック：茶色のベタ塗り→紙のまま、大きな明朝で */
+  .n-block{background:transparent;color:var(--ink);border-radius:0;padding:0;text-align:left;}
+  .n-block .mark{font-size:30px;line-height:1.65;margin-bottom:18px;}
+  .n-block .small{font-size:16px;color:var(--sub);line-height:2.0;}
+  .n-block .em{color:var(--point);}
+  @media(max-width:480px){ .n-block .mark{font-size:25px;} }
+
+  /* 引用・囲みも紙のまま */
+  .quote-big{background:transparent;padding:34px 0;}
+  .u-block{background:transparent;padding:0;margin-bottom:22px;}
+  .callout{background:transparent;color:var(--sub);padding:0;
+    border-left:2px solid var(--line);padding-left:16px;}
+  .voice-card{background:transparent;border:none;border-left:2px solid var(--point);
+    border-radius:0;padding:4px 0 4px 18px;margin-bottom:26px;}
+  .taste{background:transparent;border:none;border-radius:0;padding:0;}
+  .taste .q-item{border-bottom:none;padding:18px 0;}
+
+  /* 未来・流れ・理由：点線を外す */
+  .future li,.step,.reason,.month,.flow li,.creds li,.faq{border-bottom:none;}
+  .future li{padding:12px 0;}
+  .step{padding:22px 0;}
+  .step .num{background:transparent;color:var(--point);border:1.5px solid var(--point);}
+  .flow li{padding:11px 0 11px 42px;}
+  .flow li::before{background:transparent;color:var(--point);border:1.5px solid var(--point);}
+  .reason .rn{background:transparent;color:var(--point);border:1.5px solid var(--point);}
+  .faq{padding:22px 0;border-top:1px solid var(--line);}
+  .faq:first-of-type{border-top:none;}
+
+  /* カリキュラム：表組みっぽさを消す */
+  .term-head{border-bottom:none;color:var(--sub);font-size:12px;letter-spacing:.14em;
+    font-family:"Noto Sans JP",sans-serif;font-weight:700;margin-bottom:10px;}
+  .month{padding:15px 0;}
+  .month .t .chal{background:transparent;padding:6px 0 0;color:var(--sub);}
+
+  /* ループ図：丸ボタンの列→細い縦の線に */
+  .loop-item{background:transparent;border:none;border-radius:0;padding:8px 0;
+    font-size:17px;font-family:"Zen Old Mincho",serif;}
+  .loop-item.last{background:transparent;color:var(--point);border:none;}
+  .loop-arrow{font-size:11px;padding:0;color:var(--line);}
+
+  /* 選択カード・プラン：影と枠を最小に */
+  .choice{background:transparent;border:none;border-top:1px solid var(--line);
+    border-radius:0;padding:26px 0 22px;margin-bottom:0;}
+  .choice .letter{background:transparent;color:var(--point);border:1.5px solid var(--point);}
+  .choice .goto{background:transparent;border:1.5px solid var(--ink);color:var(--ink);border-radius:8px;}
+  .plan{border-radius:10px;box-shadow:none;}
+  .plan.rec{box-shadow:none;}
+  .plan .head{background:transparent;border-bottom:1px solid var(--line);}
+  .plan.rec .head{background:transparent;color:var(--ink);}
+  .plan.rec .head .tag{background:var(--ink);color:#fff;}
+  .plan .price{border-top:1px solid var(--line);}
+  .plan ul li{font-size:14.5px;padding:9px 0 9px 20px;}
+  .plan .targetline{background:transparent;border-left:2px solid var(--point);
+    border-radius:0;padding:4px 0 4px 14px;}
+  .plan .desc{margin-bottom:20px;}
+  .stack{background:transparent;border-top:1px solid var(--line);
+    border-bottom:1px solid var(--line);border-radius:0;padding:18px 0;}
+  .seats{background:transparent;border:1px solid var(--point);}
+
+  /* 折りたたみ：ボタンっぽさを消す */
+  details.more > summary{background:transparent;border:none;border-top:1px solid var(--ink);
+    border-bottom:1px solid var(--ink);border-radius:0;padding:16px 2px;color:var(--ink);}
+  details.more[open] > summary{background:transparent;border-radius:0;border-bottom:none;}
+  details.more .inner{border:none;border-bottom:1px solid var(--ink);border-radius:0;padding:6px 2px 26px;}
+
+  /* 客声・体験の入口・区切り */
+  .vcard{background:transparent;border:none;border-top:1px solid var(--line);
+    border-radius:0;padding:26px 0 0;}
+  .try{background:transparent;border:1px solid var(--line);border-radius:10px;}
+  .try.main{background:transparent;border-color:var(--ink);}
+  .seminar{background:transparent;border:none;border-top:2px solid var(--ink);
+    border-bottom:2px solid var(--ink);border-radius:0;padding:30px 0;}
+  .seminar .badge{background:transparent;color:var(--point);border:1px solid var(--point);}
+  .detail-divider span{background:transparent;color:var(--sub);box-shadow:none;
+    border:1px solid var(--line);}
+  .deadline{background:transparent;color:var(--ink);border:1.5px solid var(--ink);border-radius:8px;}
+  .deadline .s{color:var(--sub);}
+  .bookrow{background:transparent;padding:20px 0 0;border-top:1px solid var(--line);}
+  .prof-head img{box-shadow:none;border:none;}
+  .form-sec{background:transparent;border-top:1px solid var(--ink);}
+  .closing::before{background:rgba(30,18,10,.62);}
+  .cta-btn{box-shadow:none;border-radius:8px;}
+  .sticky-cta{background:rgba(249,247,239,.97);box-shadow:none;}
+  .mail{box-shadow:none;border-radius:10px;}
+  .mail .bar{background:transparent;}
+
+  /* 青を落として3色に絞る（生成り／濃い茶／オレンジ） */
+  .plan .forwho{color:var(--ink);}
+  .plan .envline{color:var(--point);font-size:13px;letter-spacing:.02em;}
+  .plan .start{color:var(--sub);}
+  .sec-eyebrow{color:var(--sub);}
+  .reason .rn{color:var(--point);border-color:var(--point);}
+  .try .tlabel{color:var(--point);}
+  .plan .price .split{color:var(--point);}
 </style>
 </head>
 <body>
@@ -534,28 +716,45 @@
 ================================================================
 -->
 
-<!-- ============ D：違いの宣言 ============ -->
-<header class="hero">
+<!-- ============ D：違いの宣言（FV） ============ -->
+<header class="fv">
   <div class="wrap">
-    <div class="eyebrow">オーガニック専門家コースを<br>受講してくださったみなさんへ</div>
-    <h1>挑戦を続けるための<br>場所を、つくりました。</h1>
-    <div class="lead">オーガニック専門家コースの続きに<br>３つの場所を準備しました。<br>10月から始めます。</div>
-    <div class="fv-cta">
-      <a class="cta-btn" href="#plan-daily">3つの場所を見る</a>
-      <div class="fv-note">値段の前に中身を見たい方は、そのまま下へ。<br>先に無料で体験したい方は <a href="#seminar" style="color:#ffd7a6;font-weight:700;">こちら</a>。</div>
+    <div class="pill">オーガニック専門家コース 受講生の方へ</div>
+
+    <div class="naze">なぜ、</div>
+    <div class="quits">
+      <div class="quit">新しい講座を<br>つくること</div>
+      <div class="quit">知識を<br>足すこと</div>
     </div>
-    <div class="trust">2018年開講・受講生 <b>延べ1,900名超</b>／ドイツ・バイエルン州<br>Institut für Organic Business GmbH</div>
-    <img class="logo" src="iob-logo-orange.png" alt="Institut für Organic Business" width="170">
+    <div class="yameta">を、やめたら</div>
+
+    <h1>ずっと止まっていた人が、<br><em>動き出した</em>のか？</h1>
+    <div class="escape">学びが途中で止まっていても、資格が取れていなくても、関係ありませんでした。</div>
+
+    <div class="auth">ドイツで17年。延べ1,900名を超える受講生と歩いてきて、たどり着いた答えです。</div>
+
+    <div class="pname">「挑戦を続けるための、<br>4つの場所」</div>
+    <div class="form-pill">10月スタート ／ 12ヶ月</div>
+
+    <div class="shots">
+      <img src="img/tour-toast.jpg" alt="タナホフツアーでの乾杯" loading="eager">
+      <img src="img/tour-hall.jpg" alt="ツアーに参加したみなさん" loading="eager">
+      <img src="img/tour-lounge.jpg" alt="ビオホテルのラウンジで" loading="eager">
+    </div>
+
+    <div class="fvbtn"><a class="cta-btn" href="#plan-daily">4つの場所を見る</a></div>
+    <div class="sub-note">先に無料で体験したい方は <a href="#seminar" style="color:var(--point);font-weight:700;">こちら</a>。</div>
+
+    <img class="fvlogo" src="iob-logo-orange.png" alt="Institut für Organic Business" width="150">
   </div>
-  <div class="hero-cap">2026年 独ビオホテル・タナホフツアーにて受講生と</div>
 </header>
 
 <!-- ============ あなたは今どこにいますか（A/B/C選択） ============ -->
 <section id="choose">
   <div class="wrap">
-    <div class="sec-eyebrow">まず、ひとつだけ</div>
+    
     <h2 class="sec-title">あなたは、今どこで止まっていますか？</h2>
-    <p>用意したのは3つの場所です。今の自分にいちばん近いものを、ひとつ選んでみてください。</p>
+    <p>用意したのは4つの場所です。今の自分にいちばん近いものを、ひとつ選んでみてください。</p>
 
     <div class="choice">
       <div class="letter">A</div>
@@ -596,7 +795,7 @@
 
       <ul class="parts">
         <li><b>前半45分：実践セミナー</b>（全員）<br>共同学習会で実際にやっているワークを、そのまま体験します。持ち帰れるものが1つできます。</li>
-        <li><b>後半30分：説明会</b>（興味のある方だけ）<br>3つの場所のご案内です。ここまでで、と退室していただいて大丈夫です。</li>
+        <li><b>後半30分：説明会</b>（興味のある方だけ）<br>4つの場所のご案内です。ここまでで、と退室していただいて大丈夫です。</li>
       </ul>
 
       <p style="font-size:14px;color:var(--sub);">
@@ -636,7 +835,7 @@
 
 <section>
   <div class="wrap">
-    <div class="sec-eyebrow">はじめに</div>
+    
     <h2 class="sec-title">「やりたいことは、あるんです」</h2>
     <p>オーガニックを仕事にしたい人と話していると、ほとんど同じ言葉を聞きます。</p>
     <p>「やりたいことは、あるんです」</p>
@@ -652,7 +851,7 @@
 <!-- ============ B：それで何が変わるか ============ -->
 <section class="alt">
   <div class="wrap">
-    <div class="sec-eyebrow">この場所で、変わっていくこと</div>
+    
     <h2 class="sec-title">3ヶ月後、止まっていた下書きに値段がついている</h2>
     <div class="card">
       <ul class="future">
@@ -668,7 +867,7 @@
 <!-- ============ 竹松2：困っていること ============ -->
 <section>
   <div class="wrap">
-    <div class="sec-eyebrow">もし、ひとつでも当てはまったら</div>
+    
     <h2 class="sec-title">こんな自分に、心当たりはありませんか</h2>
     <div class="card">
       <ul class="check-list">
@@ -697,7 +896,7 @@
 <!-- ============ 竹松3：今まで何をしてきたか（承認） ============ -->
 <section class="alt">
   <div class="wrap">
-    <div class="sec-eyebrow">その前に、お伝えしたいこと</div>
+    
     <h2 class="sec-title">みなさんは、もう十分やってきました</h2>
     <p>本を読んだ。講座を受けた。ノートに書き出した。アカウントをつくった。カレンダーに「やる日」を入れた。朝早く起きてみた。</p>
     <p>どれも間違っていません。実際、それで進んだ部分もあるはずです。オーガニックの知識だって、ちゃんと積み上げてこられた。</p>
@@ -709,7 +908,7 @@
 <!-- ============ N：見えない敵 ============ -->
 <section>
   <div class="wrap">
-    <div class="sec-eyebrow">止まる理由</div>
+    
     <h2 class="sec-title">なぜ、わかっているのに、動けないのか</h2>
     <div class="n-block">
       <div class="mark">止まる原因は、知識の量ではありません。<br>意志が弱いからでもありません。<br><br>一人だから、です。</div>
@@ -780,8 +979,8 @@
 <!-- ============ U：なぜ今なのか（2段階） ============ -->
 <section>
   <div class="wrap">
-    <div class="sec-eyebrow">今回、変わったこと</div>
-    <h2 class="sec-title">3つの場を、ひとつの環境にまとめました</h2>
+    
+    <h2 class="sec-title">場所を、ひとつの環境にまとめました</h2>
     <details class="more">
       <summary>これまでと、今回で何が変わったのか<span class="sub">コースが終わったあと、続ける場所がありませんでした</span></summary>
       <div class="inner">
@@ -806,7 +1005,7 @@
 <!-- ============ I：新しい勝ち方（3ステップ） ============ -->
 <section class="alt">
   <div class="wrap">
-    <div class="sec-eyebrow">では、どうすればいいか</div>
+    
     <h2 class="sec-title">挑戦が続く環境を、3つのサービスでつくりました</h2>
     <details class="more">
       <summary>土台になっている3つのサービスを見る<span class="sub">メールレッスン／共同学習会／リーダーズラウンジ</span></summary>
@@ -853,7 +1052,7 @@
 <!-- ============ 4つのプラン ============ -->
 <section>
   <div class="wrap">
-    <div class="sec-eyebrow">ご案内</div>
+    
     <h2 class="sec-title">4つの場所から、選べます</h2>
     <p>冒頭で選んだA・B・Cが、そのままこの中にあります。上下の関係ではありません。今の自分に必要な環境を、選んでください。</p>
     <p>違いは、<span class="hl">どこまで人と一緒にやるか</span>です。</p>
@@ -1000,12 +1199,12 @@
 <section class="alt" id="mail-detail">
   <div class="wrap">
     <div class="detail-divider"><span>▼ ここから、中身を詳しくご紹介します</span></div>
-    <div class="sec-eyebrow">メールレッスンの中身</div>
+    
     <h2 class="sec-title">365日、何が届くか</h2>
     <details class="more">
       <summary>365日、何が届くのかを全部見る<span class="sub">毎日届くもの・扱うテーマ一覧・アウトプット期間・資格対策</span></summary>
       <div class="inner">
-    <p>3つの場所、全部の土台になっているサービスです。毎日届く1通の中身を、詳しくご紹介します。</p>
+    <p>どの場所にも入っている、土台のサービスです。毎日届く1通の中身を、詳しくご紹介します。</p>
 
     <div class="card">
       <p style="margin-bottom:14px;"><b>毎日届くもの</b><br>テキストと、1本1〜15分のオーガニック専門家コースのショート動画。通勤や家事のすきま時間で見られる長さです。</p>
@@ -1107,7 +1306,7 @@
 <!-- ============ 90分の流れ＋試食の一口 ============ -->
 <section>
   <div class="wrap">
-    <div class="sec-eyebrow">毎回の90分</div>
+    
     <h2 class="sec-title">当日の90分は、こう進みます</h2>
     <details class="more">
       <summary>当日の90分の流れと、実際に出る問いを見る<span class="sub">チェックイン→ワーク→シェア→持ち帰り。本物の問い3つつき</span></summary>
@@ -1150,7 +1349,7 @@
 <!-- ============ リーダーズラウンジの中身 ============ -->
 <section id="lounge-detail">
   <div class="wrap">
-    <div class="sec-eyebrow">リーダーズラウンジの中身</div>
+    
     <h2 class="sec-title">グルコンでは、こんなことをします</h2>
     <details class="more">
       <summary>グループコンサルの中身を見る<span class="sub">報告・相談・宣言の3つをまわします</span></summary>
@@ -1179,7 +1378,7 @@
 <!-- ============ C：事例 ============ -->
 <section class="alt">
   <div class="wrap">
-    <div class="sec-eyebrow">実際に参加した人の言葉</div>
+    
     <h2 class="sec-title">「みんな同じなのだ」と安心できた</h2>
     <details class="more">
       <summary>グループコンサル参加者の声を読む<span class="sub">2025年12月のアンケートから</span></summary>
@@ -1361,7 +1560,7 @@
 <!-- ============ 価格・支払い ============ -->
 <section>
   <div class="wrap">
-    <div class="sec-eyebrow">お支払いについて</div>
+    
     <h2 class="sec-title">決済方法</h2>
     <table class="pay-table">
       <tr><th>銀行振込<br>（日本・ドイツ）</th><td>一括のみ</td></tr>
@@ -1379,7 +1578,7 @@
 
 <section class="alt">
   <div class="wrap">
-    <div class="sec-eyebrow">モニターについて</div>
+    
     <h2 class="sec-title">条件は、アンケートと取材へのご協力だけです</h2>
     <p>今回はモニター価格でのご案内です。お願いしたい条件は、<span class="hl">アンケートと取材にご協力いただくこと、それだけです</span>。</p>
     <p>お名前の出し方（イニシャル／フルネーム）や、お顔出しの有無は、その際に改めて個別にお伺いします。今すぐ決めていただく必要はありませんので、ご安心ください。</p>
@@ -1389,7 +1588,7 @@
 <!-- ============ FAQ ============ -->
 <section>
   <div class="wrap">
-    <div class="sec-eyebrow">よくある質問</div>
+    
     <h2 class="sec-title">お申し込み前に</h2>
     <details class="more">
       <summary>よくある質問を全部読む（11問）<span class="sub">資格・途中で止まった方・時間・返金・分割・領収書など</span></summary>
@@ -1482,7 +1681,7 @@
 <!-- ============ 申込フォーム ============ -->
 <section class="form-sec">
   <div class="wrap">
-    <div class="sec-eyebrow">お申し込み</div>
+    
     <h2 class="sec-title">申込フォーム</h2>
 
     <form id="applyForm">
